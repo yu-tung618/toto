@@ -1,0 +1,485 @@
+body {
+  box-sizing: border-box;
+  background-image: url(picture/back/brushed-alum-dark-1920x10802.png);
+}
+
+#menu-control {
+  position: absolute;
+  z-index: -2;
+  opacity: 0;
+}
+
+.header {
+  width: 100%;
+  /* max-width: 1920px; */
+  height: 47px;
+  background-color: #F3D7AA;
+  position: relative;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 100;
+}
+
+.logo {
+  text-align: center;
+}
+
+.logo img {
+  width: 45px;
+  height: 45px;
+}
+
+.menu-btn {
+  width: 40px;
+  height: 40px;
+  /* background-color: rgb(147, 55, 55); */
+  display: block;
+  position: absolute;
+  top: 5px;
+  right: 10px;
+}
+
+.menu-btn span {
+  opacity: 0;
+  width: 1px;
+  height: 1px;
+  display: block;
+  overflow: hidden;
+}
+
+.menu-btn::before {
+  content: "";
+  position: absolute;
+  height: 2px;
+  width: 30px;
+  left: 2px;
+  background-color: #878787;
+  top: 0;
+  bottom: 0;
+  margin: auto;
+  box-shadow: 0px 8px 0px #878787,
+    0px -8px 0px #878787;
+}
+
+nav {
+  width: 30%;
+  height: calc(100hv-47px);
+  background-color: #F3D7AA;
+  position: absolute;
+  top: 47px;
+  right: -300px;
+  transition: 0.5s;
+  z-index: 1;
+}
+
+nav a {
+  display: block;
+  text-decoration: none;
+  color: #000000;
+  padding: 10px 20px;
+  /* border-bottom: 1px solid #878787; */
+}
+
+nav a:hover {
+  color: #878787;
+}
+
+#menu-control:checked~.header nav {
+  right: 0;
+}
+
+@media screen and (min-width:768px) {
+  .menu-btn {
+    display: none;
+  }
+
+  .header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 100px;
+  }
+
+  nav {
+    position: relative;
+    right: 0;
+    /* display: flex; */
+    width: auto;
+    height: auto;
+    top: 0;
+    margin-right: 40px;
+  }
+
+  nav a {
+    display: inline-block;
+    border-bottom: none;
+    font-size: 20px;
+    padding: 10px 10px;
+  }
+
+  .logo {
+    margin-left: 200px;
+  }
+
+  .logo img {
+    width: 90px;
+    height: 90px;
+  }
+}
+
+.banner {
+  width: 100%;
+  /* max-width: 1920px; */
+  margin-top: 35px;
+  background-image:
+    url(picture/back/cat.png),
+    linear-gradient(to left, rgba(244, 144, 107, 0.5), rgba(255, 255, 255, 0.2)),
+    url(picture/back/brushed-alum-dark-1920x10802.png);
+
+  background-repeat:
+    no-repeat,
+    no-repeat,
+    no-repeat;
+
+  background-position:
+    bottom right 10px,
+    center,
+    bottom center;
+
+  /* 👇這裡設定每一層的大小 */
+  background-size:
+    30%,
+    /* 第一層圖片縮小到容器寬度的 40% */
+    100%,
+    /* 第二層漸層覆蓋整個背景 */
+    cover;
+  /* 第三層鋪滿底圖 */
+}
+
+.banner-text {
+  padding: 40px;
+  font-size: 20px;
+  font-weight: bold;
+  letter-spacing: 1.2px;
+  position: relative;
+}
+
+.banner-text small {
+  display: none;
+  color: #242424;
+  font-weight: 500;
+}
+
+@media screen and (min-width:768px) {
+  .banner {
+    background-position:
+      bottom right 40px,
+      center,
+      bottom center;
+    background-size:
+      22%,
+      /* 第一層圖片縮小到容器寬度的 40% */
+      100%,
+      /* 第二層漸層覆蓋整個背景 */
+      cover;
+    /* 第三層鋪滿底圖 */
+  }
+
+  .banner-text {
+    font-size: 30px;
+    padding: 100px;
+    margin-left: 80px;
+    margin-top: 50px;
+    letter-spacing: 4.8px;
+  }
+
+  .banner-text small {
+    display: block;
+    font-size: 20px;
+    position: absolute;
+    bottom: 50px;
+    left: 100px;
+  }
+}
+
+@media screen and (width>1280px) {
+  .banner {
+    /* margin-top: 150px; */
+    background-size:
+      18%,
+      /* 第一層圖片縮小到容器寬度的 40% */
+      100%,
+      /* 第二層漸層覆蓋整個背景 */
+      cover;
+    /* 第三層鋪滿底圖 */
+    background-position:
+      bottom right 80px,
+      center,
+      bottom center;
+  }
+
+  .banner-text {
+    font-size: 40px;
+  }
+}
+
+.container-medical {
+  width: 100%;
+}
+
+.medical-title h2 {
+  text-align: center;
+  margin-top: 50px;
+  font-size: 20px;
+  font-weight: bold;
+  letter-spacing: 1.2px;
+}
+
+.medical-pic {
+  width: 270px;
+  height: 270px;
+  background-color: #F8E7CD;
+  border: 1px solid #F4906B;
+  box-shadow: 0 1px 2px #F4906B;
+  border-radius: 50%;
+  margin: auto;
+  margin-top: 40px;
+  margin-bottom: 10px;
+  text-align: center;
+}
+
+.medical-pic img {
+  width: 140px;
+  height: 145px;
+  margin-top: 45px;
+}
+
+.medical-pic p {
+  margin-top: 10px;
+  font-size: 20px;
+  font-weight: bold;
+  list-style: 1.2px;
+}
+
+.medical-text {
+  background-color: #c0e0bd;
+  border: 1px solid #c0e0bd;
+  border-radius: 20px;
+  border-bottom: 5px solid #a0c49d;
+  border-right: 3px solid #a0c49d;
+  padding-bottom: 20px;
+}
+
+.medical-text p {
+  /* width: 290px; */
+  /* margin-left: 75px; */
+  width: fit-content;
+  padding: 0 30px;
+  letter-spacing: 1.2px;
+  line-height: 30px;
+
+}
+
+.medical-text p:nth-child(1) {
+  margin-top: 20px;
+  font-weight: bold;
+  padding-bottom: 5px;
+}
+
+.medical-more {
+  width: 90px;
+  /* height: 40px; */
+  border: 1px solid #FFBCA3;
+  border-radius: 45px;
+  background-color: #FFBCA3;
+  margin: auto;
+  margin-top: 50px;
+  margin-bottom: 30px;
+  font-size: px;
+  text-align: center;
+  padding: 15px 20px;
+  font-family: "Noto Sans TC";
+}
+
+.medical-more a {
+  color: #000000;
+  text-decoration: none;
+}
+
+.medical-more:hover {
+  background-color: #F4906B;
+}
+
+@media screen and (min-width:768px) {
+  .container-medical {
+    background-image:
+      url(picture/back/right.png),
+      /* 右上腳印 */
+      url(picture/back/left.png);
+    /* 左下腳印 */
+
+    background-repeat: no-repeat, no-repeat;
+
+    background-position:
+      right 40px top 40px,
+      /* 調整右上腳印 */
+      left 40px bottom 40px;
+    /* 調整左下腳印 */
+
+    background-size:
+      40%,
+      /* 右上腳印大小 */
+      35%;
+    /* 左下腳印大小 */
+  }
+
+  .medical-title h2 {
+    text-align: center;
+    margin-top: 70px;
+    margin-bottom: 20px;
+    font-size: 30px;
+    font-weight: bold;
+    letter-spacing: 4.8px;
+  }
+
+  .medical-card {
+    display: flex;
+    justify-self: center;
+    align-items: center;
+    margin-top: 20px;
+  }
+
+  .medical-card:nth-child(odd) {
+    flex-direction: row-reverse;
+  }
+
+  .medical-text {
+    margin-left: 50px;
+    transition: color .5s .1s;
+    transition: transform .5s .1s;
+    transform: translateY(0);
+    
+  }
+
+  .medical-text:hover {
+    color: rgb(34, 34, 34);
+    transform: translateY(-10px);
+    background-color: #FFBCA3;
+    border-bottom: 5px solid #F4906B;
+    border-right: 3px solid #F4906B;
+  }
+
+  .medical-card:nth-child(odd) .medical-text {
+    margin-right: 50px;
+  }
+
+  .medical-text p:nth-child(1) {
+    padding-bottom: 8px;
+  }
+
+  .medical-text p {
+    width: 520px;
+    font-size: 20px;
+    margin-left: 10px;
+    letter-spacing: 3px;
+    line-height: 35px;
+  }
+
+  .container-medical>.medical-card:nth-child(6) {
+    margin-top: 40px;
+  }
+}
+
+.container-footer {
+  width: 100%;
+  /* max-width: 1920px; */
+  /* height: 162px; */
+  background-color: #F3D7AA;
+  margin-top: -3px;
+  position: relative;
+}
+
+.footer-logo {
+  text-align: center;
+  padding-bottom: 200px;
+}
+
+.footer-logo img {
+  margin-top: 20px;
+  width: 70px;
+  height: 70px;
+}
+
+.footer-colum {
+  position: absolute;
+  top: 100px;
+  right: 100px
+}
+
+.footer-text {
+  display: flex;
+  margin-bottom: 13px;
+  font-size: 16px;
+  justify-content: center;
+  width: fit-content;
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+.footer-icon {
+  /* padding-top: 5px; */
+  /* padding-left: 120px; */
+  /* padding-bottom: 15px; */
+  text-align: center;
+  position: absolute;
+  top: 220px;
+  right: 150px
+}
+
+.footer-icon img {
+  width: 30px;
+  height: 30px;
+  margin-right: 10px;
+}
+
+@media screen and (min-width:768px) {
+  .container-footer {
+    display: flex;
+  }
+
+  .footer-logo {
+    padding-bottom: 30px;
+  }
+
+  .footer-logo img {
+    margin-left: 200px;
+    /* margin-right: 30px; */
+    margin-top: 15px;
+    width: 132px;
+    height: 132px;
+  }
+
+  .footer-colum {
+    position: absolute;
+    top: 30px;
+    right: 250px;
+
+  }
+
+  .footer-text {
+    font-size: 20px;
+    justify-content: start;
+  }
+
+  .footer-icon {
+    position: absolute;
+    top: 30px;
+    right: 50px;
+  }
+
+  .footer-icon img {
+    width: 30px;
+    height: 30px;
+    margin-right: 20px;
+  }
+}
