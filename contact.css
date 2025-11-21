@@ -1,13 +1,11 @@
 body {
-  background-image: url(picture/back/left.png), url(picture/back/brushed-alum-dark-1920x10802.png);
+  background-image: url(picture/back/left.png);
   background-repeat: no-repeat;
 
   background-position:
-    right 40px top 700px,
-    center;
+    right 40px top 700px;
   background-size:
-    30%,
-    cover;
+    30%;
 }
 
 #menu-control {
