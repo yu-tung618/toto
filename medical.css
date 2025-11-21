@@ -79,6 +79,7 @@ nav a {
   color: #000000;
   padding: 10px 20px;
   /* border-bottom: 1px solid #878787; */
+  font-family: "Noto Sans TC";
 }
 
 nav a:hover {
@@ -163,6 +164,7 @@ nav a:hover {
   font-weight: bold;
   letter-spacing: 1.2px;
   position: relative;
+  font-family: "Noto Sans TC";
 }
 
 .banner-text small {
@@ -234,6 +236,7 @@ nav a:hover {
   font-size: 20px;
   font-weight: bold;
   letter-spacing: 1.2px;
+  font-family: "Noto Sans TC";
 }
 
 .medical-pic {
@@ -260,6 +263,7 @@ nav a:hover {
   font-size: 20px;
   font-weight: bold;
   list-style: 1.2px;
+  font-family: "Noto Sans TC";
 }
 
 .medical-text {
@@ -275,10 +279,10 @@ nav a:hover {
   /* width: 290px; */
   /* margin-left: 75px; */
   width: fit-content;
-  padding: 0 30px;
+  padding: 0 20px;
   letter-spacing: 1.2px;
   line-height: 30px;
-
+  font-family: "Noto Sans TC";
 }
 
 .medical-text p:nth-child(1) {
@@ -334,14 +338,15 @@ nav a:hover {
 
   .medical-text {
     margin-left: 50px;
+    line-height: 30px;
+    letter-spacing: 3px;
     transition: color .5s .1s;
     transition: transform .5s .1s;
     transform: translateY(0);
-    
   }
 
   .medical-text:hover {
-    color: rgb(34, 34, 34);
+    color: rgb(53, 51, 51);
     transform: translateY(-10px);
     background-color: #FFBCA3;
     border-bottom: 5px solid #F4906B;
@@ -401,7 +406,7 @@ nav a:hover {
   font-size: 16px;
   justify-content: center;
   width: fit-content;
-  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+  font-family: "Noto Sans TC";
 }
 
 .footer-icon {
