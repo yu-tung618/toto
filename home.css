@@ -8,6 +8,13 @@
   }
 }
 
+.noto-sans-tc-uniquifier {
+  font-family: "Noto Sans TC", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: weight;
+  font-style: normal;
+}
+
 .banner {
   margin-top: 35px;
   background-image: url(picture/back/banner.jpg);
@@ -31,10 +38,10 @@
 
 .banner h1 {
   font-size: 20px;
-  font-weight: bold;
+  font-weight: 400;
   position: absolute;
   right: 10px;
-  bottom: 5px;
+  bottom: 20px;
   color: white;
   background-color: hsla(0, 13%, 22%, 0.2);
   /* background: radial-gradient(circle at center, #ffffff33, #f2f2f24d); */
@@ -42,8 +49,8 @@
   border: 0px solid #ffffff00;
   border-radius: 10px;
   letter-spacing: 1.2px;
-  line-height: 25px;
-  font-family: "Noto Sans TC";
+  line-height: 28px;
+
 }
 
 @media screen and (min-width:768px) {
@@ -55,58 +62,55 @@
   .banner h1 {
     font-size: 30px;
     right: 50px;
-    bottom: 20px;
+    bottom: 80px;
     padding: 10px 60px;
     border-radius: 30px;
     letter-spacing: 6px;
-    line-height: 70px;
+    line-height: 50px;
   }
-}
-
-.container-about {
-  width: 100%;
-  /* max-width: 1920px; */
-  height: 550px;
-  background-image: url(picture/back/brushed-alum-dark-1920x10802.png);
-  background-size: cover;
 }
 
 .about-flex {
   display: flex;
   flex-direction: column;
   align-items: center;
+  padding: 0 42px;
 }
 
 .about-pic {
   margin-top: 40px;
+  z-index: 3;
 }
 
 .about-pic img {
-  width: 224px;
-  height: 198px;
+  width: 314px;
+  height: 209px;
+  border-radius: 20px;
 }
 
 .about-text {
-  padding: 0 20px;
+  background-color: #fff4e285;
+  transform: translateY(-50PX);
+  border-radius: 10px;
+  padding: 0 10px 30px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
 .about-text h2 {
   text-align: center;
-  margin-top: 30px;
+  margin-top: 80px;
   font-size: 20px;
   font-weight: bold;
-  font-family: "Noto Sans TC";
   letter-spacing: 1.2px;
 }
 
 .about-text p {
-  /* margin: auto; */
   margin-top: 20px;
   font-size: 16px;
-  line-height: 30px;
-  margin-bottom: 25px;
+  line-height: 28px;
   padding: 0px 20px;
-  font-family: "Noto Sans TC";
 }
 
 .about-more {
@@ -115,18 +119,17 @@
   border: 1px solid #FFBCA3;
   border-radius: 45px;
   background-color: #FFBCA3;
-  margin: auto;
   font-size: 20px;
   text-align: center;
   padding: 8px 1px;
-
+  margin-top: 25px;
 }
 
 .about-more a,
 .serve-more a {
   color: #000000;
   text-decoration: none;
-  font-family: "Noto Sans TC";
+
 }
 
 .about-more:hover,
@@ -136,85 +139,83 @@
 
 @media screen and (min-width:768px) {
   .container-about {
-    height: 600px;
     background-image:
-      url(picture/back/right.png), url(picture/back/brushed-alum-dark-1920x10802.png);
+      url(picture/back/right.png);
     /* 右上腳印 */
     background-repeat: no-repeat;
-    background-position: right 40px bottom -30px, center;
-    background-size: 30%, cover;
+    background-position: right 40px bottom -30px;
+    background-size: 30%;
   }
 
-  /* .about-flex{display: flex;} */
+  .about-pic {
+    margin-top: 20px;
+  }
+
   .about-pic img {
-    width: 502px;
-    height: 444px;
-    margin-top: 0px;
-    margin-left: 50px;
+    width: 455px;
+    height: 303px;
   }
 
   .about-flex {
     flex-direction: row;
+    justify-content: center;
   }
 
   .about-text {
+    width: 550px;
     margin-top: 130px;
-    position: relative;
-    padding: 0 25px;
+    padding: 0 40px;
+    transform: translateY(30px);
+    transform: translateX(-30px);
   }
 
   .about-text h2 {
     justify-self: flex-start;
+    margin-top: 50px;
     margin-left: 20px;
     font-size: 30px;
     letter-spacing: 4.8px;
   }
 
   .about-text p {
-    margin-top: 30px;
+    margin-top: 20px;
     font-size: 20px;
-    line-height: 60px;
+    line-height: 40px;
+    letter-spacing: 1.2px;
+    /* padding: 0 80px; */
+ 
   }
 
   .about-more {
-    width: 150px;
     font-size: 25px;
-    padding-top: 15px;
-    padding-bottom: 15px;
-    position: absolute;
-    right: 60px;
-    top: 300px;
+    padding: 15px 40px;
+    margin-bottom: 20px;
+    align-self: flex-end;
   }
 }
-
-/* @media screen and (width>1280px){
-  .container-about{
-    padding: 0 80px;
-}  
-    .about-more{
-    width: 170px;
-    font-size: 25px;
-    padding-top: 15px;
-    padding-bottom: 15px;
-    position: absolute; 
-    right: 100px;
-    top: 350px;
+@media screen and (min-width:1440px) {
+   .about-pic img {
+    width: 617px;
+    height: 411px;
   }
-} */
+
+}
 .container-serve {
-  width: 100%;
-  margin-top: 40px;
+  margin-top: 20px;
+}
+
+.serve-flex{
+  display: flex;
+  flex-direction: column;
 }
 
 .title h2 {
-  margin-top: 67px;
   padding: 0 20px;
-  font-size: 20px;
+  font-size: 25px;
   font-weight: bold;
   text-align: center;
   margin-bottom: 25px;
   letter-spacing: 1.2px;
-  font-family: "Noto Sans TC";
 }
 
 .serve-pic {
@@ -238,10 +239,10 @@
 
 .serve-pic p {
   font-size: 20px;
-  font-weight: bold;
+  font-weight: 500;
   margin-top: 12px;
   letter-spacing: 1.2px;
-  font-family: "Noto Sans TC";
+
 }
 
 .serve-more {
@@ -254,21 +255,33 @@
   font-size: 20px;
   text-align: center;
   padding: 10px 8px;
-  font-family: "Noto Sans TC";
+
 }
 
 @media screen and (min-width:768px) {
+ .container-serve {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-content: center;
+ }
+ 
+  .serve{
+  width: 960px;
+  align-self: center;
+ }
+
+  .serve-flex{
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
+  
   .serve h2 {
     margin-top: 67px;
     font-size: 30px;
     margin-bottom: 50px;
     letter-spacing: 4.8px;
-  }
-
-  .serve-pic-flex {
-    display: flex;
-    /* margin-left: 300px; */
-    margin-bottom: 60px;
   }
 
   .serve-pic img {
@@ -280,33 +293,35 @@
   .serve-pic p {
     font-size: 20px;
     margin-top: 7px;
-    letter-spacing: 4.8px;
+    letter-spacing: 1.5px;
+    font-weight: 600;
   }
 
   .serve-more {
-    width: 150px;
-    margin-left: 500px;
-    font-size: 25px;
-    padding-top: 17px;
-    padding-bottom: 17px;
-    margin: auto;
+  font-size: 25px;
+    padding: 15px 40px;
+    margin-bottom: 20px;
+    margin-top: 20px;
   }
 }
 
 .container-faq-box {
   width: 100%;
-  max-width: 1000px;
+  max-width: 960px;
   background: rgba(235, 218, 197, 0.8);
   vertical-align: middle;
   margin-top: 67px;
   border: 1px solid rgba(235, 218, 197, 0.8);
   border-radius: 10px;
-  position: relative;
+  display: flex;
+  flex-direction: column;
 }
 
 /* FAQ 外層 */
 .faq-item {
-  padding: 10px 0;
+  padding: 2px 0;
+  margin-left: -10px;
+  margin-right: 20px;
 }
 
 /* 隱藏 checkbox */
@@ -321,7 +336,7 @@
   /* margin-left: 423px; */
   font-weight: bold;
   letter-spacing: 1.2px;
-  font-family: "Noto Sans TC";
+
 }
 
 /* 問題文字與箭頭 */
@@ -333,69 +348,56 @@
   cursor: pointer;
   font-weight: bold;
   font-size: 16px;
-  font-family: "Noto Sans TC";
   letter-spacing: 1.2px;
-  font-weight: bold;
-  padding-top: 30px;
+  font-weight: 600;
+  padding-top: 10px;
 }
 
-/* 下箭頭符號 */
+/* +符號 */
 .faq-label::after {
-  content: "";
-  transition: transform 0.3s;
-  width: 20px;
-  height: 20px;
-  background-image: url("picture/icon/dome.png");
-  background-size: contain;
-  /* 或 cover:鋪滿背景，不留空白 ,contain:整張塞進框裡，不裁剪;,控制背景圖片縮放*/
-  background-repeat: no-repeat;
-  vertical-align: middle;
-  /* 讓圖跟文字對齊 */
-  margin-right: 39px;
+  content: "+";
+  transition: transform 0.3s ease;
+   font-size: 20px;
 }
 
-/* 如果被打開（checked），箭頭轉向上 */
+/* 如果被打開（checked），- */
 .faq-item input:checked+.faq-label::after {
-  content: "";
-  width: 20px;
-  height: 20px;
-  background-image: url("picture/icon/up.png");
-  background-size: contain;
-  /* 或 cover */
-  background-repeat: no-repeat;
-  vertical-align: middle;
-  /* 讓圖跟文字對齊 */
+  content: "-";
+  font-size: 20px;
 }
 
 /* 答案區塊預設隱藏 */
 .faq-content {
   max-height: 0;
   overflow: hidden;
-  transition: max-height 0.3s ease-out;
+  transition: max-height 0.3s ease;
   line-height: 1.6;
   font-size: 16px;
-  font-family: "Noto Sans TC";
   letter-spacing: 1.2px;
   margin-left: 44px;
-  margin-top: 20px;
+  margin-top: 10px;
+  color: #2a2a2a;
 }
 
 /* 被打開時顯示內容 */
 .faq-item input:checked~.faq-content {
-  max-height: 200px;
+  max-height: 100px;
+}
+
+.faq-cat{
+  text-align: center;
 }
 
 .faq-cat img {
   width: 150px;
   height: 203px;
-  bottom: 24px;
-  margin-left: 130px;
 }
 
 @media screen and (min-width:768px) {
   .container-faq-box {
     margin: auto;
     margin-top: 67px;
+    position: relative;
   }
 
   .faq-item h2 {
@@ -406,29 +408,44 @@
   }
 
   .faq-label::after {
-    margin-right: 173px;
+    margin-right: 100px;
+    font-size: 25px;
   }
+
+  .faq-item input:checked+.faq-label::after {
+  font-size: 30px;
+}
 
   .faq-label {
     font-size: 20px;
     letter-spacing: 4.8px;
     margin-left: 205px;
-    padding-top: 30px;
+    padding-top: 20px;
   }
 
   .faq-content {
     font-size: 20px;
     letter-spacing: 4.8px;
     margin-left: 205px;
-    margin-top: 27px;
+    margin-top: 15px;
+  }
+
+  .faq-cat{
+    position: absolute;
+    top:90px;
+    left: -70px;
   }
 
   .faq-cat img {
-    position: absolute;
     width: 288px;
     height: 390px;
-    bottom: -80px;
-    left: -200px;
+  }
+
+  /* .container-faq-box .faq-item:nth-last-child(-n+2) {
+  padding-bottom: 50px;
+} 選取倒數第二個物件 */
+  .container-faq-box .faq-item:nth-child(4 of .faq-item) {
+    padding-bottom: 50px;
   }
 }
 
