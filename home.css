@@ -143,7 +143,7 @@
       url(picture/back/right.png);
     /* 右上腳印 */
     background-repeat: no-repeat;
-    background-position: right 40px bottom -30px;
+    background-position: right 10px bottom -30px;
     background-size: 30%;
   }
 
@@ -201,7 +201,7 @@
 
 }
 .container-serve {
-  margin-top: 20px;
+  margin-top: 30px;
 }
 
 .serve-flex{
@@ -437,8 +437,8 @@
   }
 
   .faq-cat img {
-    width: 288px;
-    height: 390px;
+    width: 268px;
+    height: 370px;
   }
 
   /* .container-faq-box .faq-item:nth-last-child(-n+2) {

@@ -1,3 +1,10 @@
+.noto-sans-tc-uniquifier {
+  font-family: "Noto Sans TC", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: weight;
+  font-style: normal;
+}
+
 body {
   background-image: url(picture/back/left.png);
   background-repeat: no-repeat;
@@ -15,27 +22,22 @@ body {
   margin-top: 35px;
   background-image:
     url(picture/back/service.png),
-    linear-gradient(to left, rgba(160, 196, 157, 0.5), rgba(255, 255, 255, 0.2)),
-    url(picture/back/brushed-alum-dark-1920x10802.png);
+    linear-gradient(to left, rgba(160, 196, 157, 0.5), rgba(255, 255, 255, 0.2));
 
   background-repeat:
-    no-repeat,
     no-repeat,
     no-repeat;
 
   background-position:
     bottom right 20px,
-    center,
-    bottom center;
+    center;
 
   /* 👇這裡設定每一層的大小 */
   background-size:
     60%,
     /* 第一層圖片縮小到容器寬度的 40% */
-    100%,
+    100%;
     /* 第二層漸層覆蓋整個背景 */
-    cover;
-  /* 第三層鋪滿底圖 */
 }
 
 .banner-text {
@@ -44,7 +46,6 @@ body {
   font-weight: bold;
   letter-spacing: 1.2px;
   position: relative;
-  font-family: "Noto Sans TC";
 }
 
 .banner-text small {
@@ -119,7 +120,6 @@ body {
   margin-top: 50px;
   padding-top: 20px;
   font-weight: bold;
-  font-family: "Noto Sans TC";
 }
 
 .time-day {
@@ -223,7 +223,6 @@ body {
   width: 100%;
   text-align: center;
   margin-top: 50px;
-  padding-bottom: 20px;
 
 }
 
@@ -231,7 +230,8 @@ body {
   font-size: 20px;
   letter-spacing: 1.2px;
   font-weight: bold;
-  font-family: "Noto Sans TC";
+  margin-bottom: 20px;
+
 }
 
 .reserve-notice {
@@ -247,7 +247,6 @@ body {
   padding: 0 20px;
   line-height: 20px;
   text-align: left;
-  font-family: "Noto Sans TC";
   display: flex;
   align-items: flex-end;
 }
@@ -320,6 +319,6 @@ body {
 
 @media screen and (width>1280px) {
   .reserve-pic img {
-    right: 300px;
+    right: -40px;
   }
 }

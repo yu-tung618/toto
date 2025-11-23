@@ -1,32 +1,30 @@
-
+.noto-sans-tc-uniquifier {
+  font-family: "Noto Sans TC", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: weight;
+  font-style: normal;
+}
 
 .banner {
-  width: 100%;
-  /* max-width: 1920px; */
   margin-top: 35px;
   background-image:
     url(picture/back/about.png),
-    linear-gradient(to left, rgba(244, 144, 107, 0.5), rgba(255, 255, 255, 0.2)),
-    url(picture/back/brushed-alum-dark-1920x10802.png);
+    linear-gradient(to left, rgba(244, 144, 107, 0.5), rgba(255, 255, 255, 0.2));
 
   background-repeat:
-    no-repeat,
     no-repeat,
     no-repeat;
 
   background-position:
     bottom right,
-    center,
-    bottom center;
+    center;
 
   /* 👇這裡設定每一層的大小 */
   background-size:
     70%,
-    /* 第一層圖片縮小到容器寬度的 40% */
-    100%,
+    100%;
     /* 第二層漸層覆蓋整個背景 */
-    cover;
-  /* 第三層鋪滿底圖 */
+  
 }
 
 .banner-text {
@@ -46,22 +44,11 @@
   .banner {
     background-position:
       bottom right,
-      center,
-      bottom center;
-    background-size:
-      40%,
-      /* 第一層圖片縮小到容器寬度的 40% */
-      100%,
-      /* 第二層漸層覆蓋整個背景 */
-      cover;
-    /* 第三層鋪滿底圖 */
+      center;
     background-size:
       50%,
-      /* 第一層圖片縮小到容器寬度的 40% */
-      100%,
+      100%;
       /* 第二層漸層覆蓋整個背景 */
-      cover;
-    /* 第三層鋪滿底圖 */
   }
 
   .banner-text {
@@ -85,106 +72,140 @@
   .banner {
     /* margin-top: 150px; */
     background-size:
-      40%,
-     
-      100%,
+      35%,
+      100%;
       /* 第二層漸層覆蓋整個背景 */
-      cover;
-    /* 第三層鋪滿底圖 */
     background-position:
       bottom right,
-      center,
-      bottom center;
+      center;
   }
-
   .banner-text {
     font-size: 40px;
   }
 }
 
-.container-about{
-   width: 100%;
-   /* max-width: 1920px; */
-   height: 550px;
-   background-image:url(picture/back/brushed-alum-dark-1920x10802.png);
-   background-size: cover;   
+.about-flex {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 0 42px;
 }
-.about-flex{
+
+.about-pic {
+  margin-top: 40px;
+  z-index: 3;
+}
+
+.about-pic img {
+  width: 314px;
+  height: 209px;
+  border-radius: 20px;
+}
+
+.about-text {
+  background-color: #fff4e285;
+  transform: translateY(-50PX);
+  border-radius: 10px;
+  padding: 0 10px 30px;
   display: flex;
   flex-direction: column;
   align-items: center;
 }
-.about-pic{
-  margin-top: 40px;
+
+.about-text h2 {
+  text-align: center;
+  margin-top: 80px;
+  font-size: 20px;
+  font-weight: bold;
+  letter-spacing: 1.2px;
 }
-.about-pic img{
-    width: 224px;
-    height: 198px;
+
+.about-text p {
+  margin-top: 20px;
+  font-size: 16px;
+  line-height: 28px;
+  padding: 0px 20px;
 }
-.about-text{
-  padding: 0 20px;
+
+.about-more {
+  width: 90px;
+  /* height: 40px; */
+  border: 1px solid #FFBCA3;
+  border-radius: 45px;
+  background-color: #FFBCA3;
+  font-size: 20px;
+  text-align: center;
+  padding: 8px 1px;
+  margin-top: 25px;
 }
-.about-text h2{
-    text-align: center;
-    margin-top: 30px;
-    font-size: 20px;
-    font-weight: bold;
-    font-family: "Noto Sans TC";
-    letter-spacing: 1.2px;
+
+.about-more a,
+.serve-more a {
+  color: #000000;
+  text-decoration: none;
+
 }
-.about-text p{
-    /* margin: auto; */
-    margin-top: 20px;
-    font-size: 16px;
-    line-height: 30px;
-    margin-bottom: 25px;
-    padding: 0px 20px;
-     font-family: "Noto Sans TC";   
+
+.about-more:hover,
+.serve-more:hover {
+  background-color: #F4906B;
 }
+
 @media screen and (min-width:768px) {
-   .container-about{
-    height: 650px;
-    background-image: 
-    url(picture/back/right.png),url(picture/back/brushed-alum-dark-1920x10802.png);  /* 右上腳印 */
-  background-repeat: no-repeat;
-  background-position: right 40px bottom -60px, center;  
-  background-size: 35%, cover;   
-}
-  /* .about-flex{display: flex;} */
-  .about-pic img{
-    width: 502px;
-    height: 444px;
-    margin-top: 70px;
-    margin-left: 50px;
+  .container-about {
+    background-image:
+      url(picture/back/right.png);
+    /* 右上腳印 */
+    background-repeat: no-repeat;
+    background-position: right 10px bottom -30px;
+    background-size: 30%;
+    padding-bottom: 20px;
   }
-  .about-flex{
+
+  .about-pic {
+    margin-top: 20px;
+  }
+
+  .about-pic img {
+    width: 455px;
+    height: 303px;
+  }
+
+  .about-flex {
     flex-direction: row;
+    justify-content: center;
+    margin-top: -80px;
   }
-  .about-text{
+
+  .about-text {
+    width: 550px;
     margin-top: 130px;
-    position: relative;
-    padding: 0 25px;
+    padding: 0 40px;
+    transform: translateY(30px);
+    transform: translateX(-30px);
   }
-  .about-text h2{
+
+  .about-text h2 {
     justify-self: flex-start;
+    margin-top: 50px;
     margin-left: 20px;
     font-size: 30px;
     letter-spacing: 4.8px;
   }
-  .about-text p{
-    margin-top: 30px;
+
+  .about-text p {
+    margin-top: 20px;
     font-size: 20px;
-    line-height: 60px;
+    line-height: 40px;
+    letter-spacing: 1.2px;
+    padding-bottom: 25px;
   }
 }
-@media screen and (width>1280px){
-  .container-about{
-    padding: 0 80px;
-}  
-}
-.container-team {
-  width: 100%;
-  max-width: 1920px;
+@media screen and (min-width:1440px) {
+   .about-pic img {
+    width: 617px;
+    height: 411px;
+  }
 
 }
 
@@ -193,7 +214,7 @@
   font-weight: bold;
   letter-spacing: 1.2px;
   text-align: center;
-  margin-top: 40px;
+  margin-top: 10px;
 }
 
 .team-wrap {
@@ -205,40 +226,42 @@
 .team-pic {
   margin-top: 34px;
   margin-bottom: 15px;
-  filter: drop-shadow(0px 4px 5px hwb(0 0% 100% / 0.3))
+  filter: drop-shadow(1px 2px 2px hwb(0 39% 61% / 0.3))
 }
 
 .team-text p {
-  line-height: 30px;
-  font-family: "Noto Sans TC";
+  line-height: 28px;
+  letter-spacing: 1px;
 }
 
 .team-text p:nth-of-type(1) {
   font-size: 20px;
   font-weight: bold;
   padding-bottom: 5px;
+  letter-spacing: 1px;
 }
 
 @media screen and (min-width:768px) {
   .container-team {
-    background-position: bottom left, top right;
-    background-size: 25%;
-    background-image: url(picture/back/left.png);
+    background-image:
+      url(picture/back/lift.png);
+    /* 右上腳印 */
     background-repeat: no-repeat;
-    background-position: bottom  left;
-    background-size: 40%;
+    background-position: left 10px bottom 60px;
+    background-size: 30%;
+   margin-bottom: -20px;
   }
 
   .team-title h2 {
     font-size: 30px;
     letter-spacing: 4.8px;
     margin-top: 67px;
+    margin-bottom: 20px;
   }
 
   .team-wrap {
     flex-direction: row;
     justify-content: space-evenly;
-    margin-top: 60px;
   }
 
   .team-card {
@@ -251,7 +274,7 @@
     /* margin-right: 44px; */
     font-size: 20px;
     line-height: 40px;
-
+    letter-spacing: 1.2px;
   }
 
   .team-text p:nth-of-type(1) {
@@ -268,6 +291,10 @@
     width: 200px;
   }
 
+.team-wrap:last-child {
+  margin-top: -80px;
+}
+
   .team-wrap:last-child .team-text:nth-last-of-type(-n+2) {
     margin-top: 50px;
     margin-right: 30px;
@@ -277,15 +304,15 @@
     margin-right: 40px;
     padding-left: 25px;
   }
+  .team-card:nth-child(1) .team-text{
+   margin-right: 10px;
+}
 }
 
-
 .container-hospital {
-  width: 100%;
-  max-width: 1920px;
-  background-image: url(picture/back/brushed-alum-dark-1920x10802.png);
-  margin-top: 62px;
-  transform: translateY(30PX);
+  background-color: #fff4e285;
+  margin-bottom: -40px;
+  margin-top: 30px;
 }
 
 .hospital-title h2 {
@@ -334,7 +361,7 @@
     margin-left: 20px;
   }
 
-  .hospital-pic-wrap .hospital-pic:nth-child(2) {
+  .hospital-pic-wrap .hospital-pic:nth-child(3) {
     display: inline-block;
     /*記得到時候刪掉*/
   }
