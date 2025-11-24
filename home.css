@@ -20,7 +20,7 @@
   background-image: url(picture/back/banner.jpg);
   width: 100%;
   /* max-width: 1920px; */
-  height: 225px;
+  height: 300px;
   background-repeat: no-repeat;
   background-size: cover;
   /* 圖片填滿容器 */
@@ -53,7 +53,7 @@
 
 }
 
-@media screen and (min-width:768px) {
+@media screen and (min-width:1020px) {
   .banner {
     height: 550px;
     /* margin-top: 150px; */
@@ -143,8 +143,14 @@
       url(picture/back/right.png);
     /* 右上腳印 */
     background-repeat: no-repeat;
-    background-position: right 10px bottom -30px;
+    background-position: right 10px bottom -10px;
     background-size: 30%;
+  }
+}
+
+@media screen and (min-width:1020px) {
+  .container-about {
+    background-position: right 10px bottom -30px;
   }
 
   .about-pic {
@@ -183,7 +189,7 @@
     line-height: 40px;
     letter-spacing: 1.2px;
     /* padding: 0 80px; */
- 
+
   }
 
   .about-more {
@@ -193,18 +199,20 @@
     align-self: flex-end;
   }
 }
+
 @media screen and (min-width:1440px) {
-   .about-pic img {
+  .about-pic img {
     width: 617px;
     height: 411px;
   }
 
 }
+
 .container-serve {
   margin-top: 30px;
 }
 
-.serve-flex{
+.serve-flex {
   display: flex;
   flex-direction: column;
 }
@@ -259,29 +267,52 @@
 }
 
 @media screen and (min-width:768px) {
- .container-serve {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-content: center;
- }
- 
-  .serve{
-  width: 960px;
-  align-self: center;
- }
+  .serve-flex {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+  }
 
-  .serve-flex{
-  display: flex;
-  flex-direction: row;
-  justify-content: center;
+  .serve-pic {
+    width: 200px;
+    height: 200px;
+  }
+
+  .serve-pic img {
+    width: 100px;
+    height: 100px;
+  }
 }
-  
+
+@media screen and (min-width:1020px) {
+  .container-serve {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-content: center;
+  }
+
+  .serve {
+    width: 960px;
+    align-self: center;
+  }
+
+  .serve-flex {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+  }
+
   .serve h2 {
     margin-top: 67px;
     font-size: 30px;
     margin-bottom: 50px;
     letter-spacing: 4.8px;
+  }
+
+  .serve-pic {
+    width: 250px;
+    height: 250px;
   }
 
   .serve-pic img {
@@ -298,7 +329,7 @@
   }
 
   .serve-more {
-  font-size: 25px;
+    font-size: 25px;
     padding: 15px 40px;
     margin-bottom: 20px;
     margin-top: 20px;
@@ -308,10 +339,10 @@
 .container-faq-box {
   width: 100%;
   max-width: 960px;
-  background: rgba(235, 218, 197, 0.8);
+  background: rgba(235, 218, 197, 0.5);
   vertical-align: middle;
   margin-top: 67px;
-  border: 1px solid rgba(235, 218, 197, 0.8);
+  border: 1px solid rgba(235, 218, 197, 0.5);
   border-radius: 10px;
   display: flex;
   flex-direction: column;
@@ -357,7 +388,7 @@
 .faq-label::after {
   content: "+";
   transition: transform 0.3s ease;
-   font-size: 20px;
+  font-size: 20px;
 }
 
 /* 如果被打開（checked），- */
@@ -384,16 +415,23 @@
   max-height: 100px;
 }
 
-.faq-cat{
+.faq-cat {
   text-align: center;
 }
 
 .faq-cat img {
-  width: 150px;
-  height: 203px;
+  display: none;
+
+
 }
 
 @media screen and (min-width:768px) {
+  .container-faq-box .faq-item:nth-child(4 of .faq-item) {
+    padding-bottom: 30px;
+  }
+}
+
+@media screen and (min-width:1020px) {
   .container-faq-box {
     margin: auto;
     margin-top: 67px;
@@ -413,8 +451,8 @@
   }
 
   .faq-item input:checked+.faq-label::after {
-  font-size: 30px;
-}
+    font-size: 30px;
+  }
 
   .faq-label {
     font-size: 20px;
@@ -430,15 +468,16 @@
     margin-top: 15px;
   }
 
-  .faq-cat{
+  .faq-cat {
     position: absolute;
-    top:90px;
-    left: -70px;
+    top: 90px;
+    left: -120px;
+    z-index: -1;
   }
 
   .faq-cat img {
-    width: 268px;
-    height: 370px;
+    display: block;
+    width: 400px;
   }
 
   /* .container-faq-box .faq-item:nth-last-child(-n+2) {

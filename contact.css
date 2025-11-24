@@ -4,21 +4,20 @@
   font-weight: weight;
   font-style: normal;
 }
-
-body {
-  background-image: url(picture/back/left.png);
-  background-repeat: no-repeat;
-
-  background-position:
-    right 40px top 700px;
-  background-size:
-    30%;
+@media screen and (min-width:1020px){
+  body{
+    margin-top: 90px;
+    background-image:
+      url(picture/back/right.png);
+    background-repeat: no-repeat;
+    background-position:
+      left 40px top 280px;
+    background-size:
+      30%;
+  
+  }
 }
-
-
 .banner {
-  width: 100%;
-  /* max-width: 1920px; */
   margin-top: 35px;
   background-image:
     url(picture/back/service.png),
@@ -59,7 +58,7 @@ body {
       center,
       bottom center;
     background-size:
-      40%,
+      45%,
       /* 第一層圖片縮小到容器寬度的 40% */
       100%,
       /* 第二層漸層覆蓋整個背景 */
@@ -68,25 +67,25 @@ body {
   }
 
   .banner-text {
-    font-size: 30px;
-    padding: 100px;
-    margin-left: 80px;
+    padding: 80px;
+    margin-left: 10px;
     margin-top: 50px;
-    letter-spacing: 4.8px;
+    letter-spacing: 3px;
+    font-size: 20px;
   }
 
   .banner-text small {
     display: block;
     color: #242424;
-    font-size: 20px;
+    font-size: 16px;
     position: absolute;
     bottom: 50px;
-    left: 100px;
+    left: 80px;
     font-weight: 500;
   }
 }
 
-@media screen and (width>1280px) {
+@media screen and (min-width:1020px) {
   .banner {
     /* margin-top: 150px; */
     background-size:
@@ -102,7 +101,13 @@ body {
   }
 
   .banner-text {
-    font-size: 40px;
+    font-size: 30px;
+    margin-left: 100px;
+  }
+  .banner-text small {
+    font-size: 20px;
+    position: absolute;
+    bottom: 40px;
   }
 }
 
@@ -165,7 +170,7 @@ body {
   padding-left: 30px;
   padding-right: 30px;
   color: #f00;
-  font-weight: bold;
+  font-weight: 600;
   padding-bottom: 16px;
   /* text-align: center; */
   line-height: 20px;
@@ -178,7 +183,7 @@ body {
   z-index: 1000;
 }
 
-@media screen and (min-width:768px) {
+@media screen and (min-width:1020px) {
   .container-time {
     margin-left: 0;
     margin-right: 0;
@@ -220,10 +225,8 @@ body {
 }
 
 .container-reserve {
-  width: 100%;
   text-align: center;
-  margin-top: 50px;
-
+  padding: 0 15px;
 }
 
 .reserve-title {
@@ -231,58 +234,42 @@ body {
   letter-spacing: 1.2px;
   font-weight: bold;
   margin-bottom: 20px;
-
+  margin-top: 40px;
 }
 
 .reserve-notice {
-  width: 100%;
-  /* max-width: 960px; */
   margin-bottom: 120px;
-  position: relative;
   margin: auto;
-}
-
-.reserve-notice p {
-  margin-bottom: 10px;
   padding: 0 20px;
-  line-height: 20px;
+   display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.reserve-notice ol li {
+  margin-bottom: 10px;
+  line-height: 28px;
   text-align: left;
-  display: flex;
-  align-items: flex-end;
+  list-style: decimal;
+  display: list-item; 
 }
 
-.reserve-notice p:nth-child(2)::before,
-.reserve-notice p:nth-child(3)::before {
-  content: "";
-  background-image: url(picture/images/Group\ 227.png);
-  background-repeat: no-repeat;
-  width: 15px;
-  height: 15px;
-  display: block;
+.foot ul li{
+  list-style-type: disc;
+  margin-left: 20px;
 }
 
-.reserve-pic img {
-  width: 30px;
-  position: absolute;
-  opacity: 0;
-}
-
-@media screen and (min-width:768px) {
+@media screen and (min-width:1020px) {
   .container-reserve {
     margin-top: 90px;
     background-image:
-      url(picture/back/right.png);
-    /* 右上腳印 */
-
+      url(picture/back/lift.png);
     background-repeat: no-repeat;
-
     background-position:
-      left 40px bottom 40px;
-    /* 調整左下腳印 */
-
+      right 40px top -25px;
     background-size:
       30%;
-    /* 左下腳印大小 */
+  
   }
 
   .reserve-title {
@@ -294,31 +281,19 @@ body {
     max-width: 960px;
     margin: auto;
     padding-top: 20px;
-    padding-bottom: 150px;
+    padding-bottom: 30px;
+    align-items: center;
   }
 
-  .reserve-notice p {
+  .reserve-notice ol li {
     font-size: 20px;
     line-height: 40px;
   }
-.reserve-notice p:nth-child(2)::before,
+/* .reserve-notice p:nth-child(2)::before,
 .reserve-notice p:nth-child(3)::before {
   content: "";
   background-image: url(picture/images/Group\ 228.png);
   width: 25px;
   height: 25px;
-}
-  .reserve-pic img {
-    width: 167px;
-    height: 250px;
-    opacity: 1;
-    right: 20px;
-    bottom: -40px;
-  }
-}
-
-@media screen and (width>1280px) {
-  .reserve-pic img {
-    right: -40px;
-  }
+} */
 }

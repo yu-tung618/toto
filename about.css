@@ -44,43 +44,59 @@
   .banner {
     background-position:
       bottom right,
-      center;
+      center,
+      bottom center;
     background-size:
       50%,
-      100%;
+      /* 第一層圖片縮小到容器寬度的 40% */
+      100%,
       /* 第二層漸層覆蓋整個背景 */
+      cover;
+    /* 第三層鋪滿底圖 */
+  }
+
+  .banner-text {
+    padding: 80px;
+    margin-left: 10px;
+    margin-top: 50px;
+    letter-spacing: 3px;
+    font-size: 20px;
+  }
+
+  .banner-text small {
+    display: block;
+    color: #242424;
+    font-size: 16px;
+    position: absolute;
+    bottom: 50px;
+    left: 80px;
+    font-weight: 500;
+  }
+}
+
+@media screen and (min-width:1020px) {
+  .banner {
+    /* margin-top: 150px; */
+    background-size:
+      40%,
+      100%,
+      /* 第二層漸層覆蓋整個背景 */
+      cover;
+    /* 第三層鋪滿底圖 */
+    background-position:
+      bottom right,
+      center,
+      bottom center;
   }
 
   .banner-text {
     font-size: 30px;
-    padding: 100px;
-    margin-left: 80px;
-    margin-top: 50px;
-    letter-spacing: 4.8px;
+    margin-left: 100px;
   }
-  .banner-text small{
-  display: block;
-  font-size: 20px;
-  position: absolute;
-  bottom: 50px;
-  left: 100px;
-  color: #242424;
-   font-weight: 500;
-}
-}
-@media screen and (width>1280px){
-  .banner {
-    /* margin-top: 150px; */
-    background-size:
-      35%,
-      100%;
-      /* 第二層漸層覆蓋整個背景 */
-    background-position:
-      bottom right,
-      center;
-  }
-  .banner-text {
-    font-size: 40px;
+  .banner-text small {
+    font-size: 20px;
+    position: absolute;
+    bottom: 40px;
   }
 }
 
@@ -151,7 +167,7 @@
   background-color: #F4906B;
 }
 
-@media screen and (min-width:768px) {
+@media screen and (min-width:1020px) {
   .container-about {
     background-image:
       url(picture/back/right.png);
@@ -226,7 +242,12 @@
 .team-pic {
   margin-top: 34px;
   margin-bottom: 15px;
-  filter: drop-shadow(1px 2px 2px hwb(0 39% 61% / 0.3))
+  filter: drop-shadow(1px 2px 2px hwb(0 39% 61% / 0.3));
+  
+}
+
+.team-pic img{
+  border-radius: 10px;
 }
 
 .team-text p {
@@ -244,12 +265,28 @@
 @media screen and (min-width:768px) {
   .container-team {
     background-image:
+      url(picture/back/lift.png),
+      url(picture/back/right.png);
+    /* 右上腳印 */
+    background-repeat: no-repeat;
+    background-position: left 10px top 60px,right 10px bottom 30px;
+    background-size: 40%;
+   margin-bottom: 50px;
+}
+.team-wrap{
+  flex-direction: row;
+  justify-content: space-evenly;
+}
+}
+@media screen and (min-width:1020px) {
+  .container-team {
+    background-image:
       url(picture/back/lift.png);
     /* 右上腳印 */
     background-repeat: no-repeat;
-    background-position: left 10px bottom 60px;
+    background-position: left 10px top 60px;
     background-size: 30%;
-   margin-bottom: -20px;
+   margin-bottom: 50px;
   }
 
   .team-title h2 {
@@ -297,7 +334,7 @@
 
   .team-wrap:last-child .team-text:nth-last-of-type(-n+2) {
     margin-top: 50px;
-    margin-right: 30px;
+    margin-right: 40px;
   }
 
   .team-card:nth-child(2) .team-text:nth-last-of-type(1) {

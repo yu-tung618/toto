@@ -1,10 +1,9 @@
-/* body {
-  background-image: url(picture/back/brushed-alum-dark-1920x10802.png);
-  background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
-} */
-
+.noto-sans-tc-uniquifier {
+  font-family: "Noto Sans TC", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: weight;
+  font-style: normal;
+}
 .banner {
   width: 100%;
   /* max-width: 1920px; */
@@ -40,7 +39,6 @@
   font-weight: bold;
   letter-spacing: 1.2px;
   position: relative;
-  font-family: "Noto Sans TC";
 }
 
 .banner-text small {
@@ -51,9 +49,12 @@
 
 @media screen and (min-width:768px) {
   .banner {
-    /* margin-top: 150px; */
+    background-position:
+      bottom right,
+      center,
+      bottom center;
     background-size:
-      25%,
+      35%,
       /* 第一層圖片縮小到容器寬度的 40% */
       100%,
       /* 第二層漸層覆蓋整個背景 */
@@ -62,29 +63,29 @@
   }
 
   .banner-text {
-    font-size: 30px;
-    padding: 100px;
-    margin-left: 80px;
+    padding: 80px;
+    margin-left: 10px;
     margin-top: 50px;
-    letter-spacing: 4.8px;
-    
+    letter-spacing: 3px;
+    font-size: 20px;
   }
 
   .banner-text small {
     display: block;
-    font-size: 20px;
+    color: #242424;
+    font-size: 16px;
     position: absolute;
     bottom: 50px;
-    left: 100px;
+    left: 80px;
+    font-weight: 500;
   }
 }
 
-@media screen and (width>1280px) {
+@media screen and (min-width:1020px) {
   .banner {
     /* margin-top: 150px; */
     background-size:
-      20%,
-      /* 第一層圖片縮小到容器寬度的 40% */
+      25%,
       100%,
       /* 第二層漸層覆蓋整個背景 */
       cover;
@@ -96,9 +97,16 @@
   }
 
   .banner-text {
-    font-size: 40px;
+    font-size: 30px;
+    margin-left: 100px;
+  }
+  .banner-text small {
+    font-size: 20px;
+    position: absolute;
+    bottom: 40px;
   }
 }
+
 
 .container-feedback {
   width: 100%;
@@ -113,7 +121,7 @@
 
 .feadback-pic {
   text-align: center;
-  filter: drop-shadow(3px 8px 10px rgba(0, 0, 0, 0.5));
+  filter: drop-shadow(1px 2px 2px rgba(103, 103, 103, 0.5));
 }
 
 .feadback-text {
@@ -124,13 +132,13 @@
   border-bottom: 5px solid #a0c49d;
   border-right: 3px solid #a0c49d;
   padding: 20px 30px;
+  margin-top: -40px;
   position: relative;
 }
 
 .feadback-text p {
   width: fit-content;
-  line-height: 30px;
-  font-family: "Noto Sans TC";
+  line-height: 28px;
 }
 
 .feadback-text p:nth-of-type(1) {
@@ -145,6 +153,22 @@
   padding: 5px 10px;
 }
 
+.more-flex{
+  display: flex;
+  justify-content: center;
+}
+
+.more {
+  width: 20px;
+  border: 1px solid #FFBCA3;
+  border-radius: 50px;
+  background-color: #FFBCA3;
+  font-size: 20px;
+  margin: 0 20px;
+  text-align: center;
+  padding: 20px 20px;
+}
+
 @media screen and (min-width:768px) {
   .container-feedback {
     /* position: relative;  父層相對定位：讓腳印能定位 */
@@ -152,7 +176,49 @@
     background-image:
       url(picture/back/right.png),
       /* 右上腳印 */
-      url(picture/back/left.png);
+      url(picture/back/lift.png);
+    /* 左下腳印 */
+
+    background-repeat: no-repeat, no-repeat;
+
+    background-position:
+      right 40px top 40px,
+      /* 調整右上腳印 */
+      left 40px bottom 150px;
+    /* 調整左下腳印 */
+
+    background-size:
+      50%,
+      /* 右上腳印大小 */
+      45%;
+    /* 左下腳印大小 */
+  }
+  
+  .feadback-card {
+    padding: 0 40px;
+    margin-top: 60px;
+    margin-bottom: 40px;
+    display: flex;
+    align-items: center;
+  }
+
+  .feadback-card:nth-child(even) {
+    flex-direction: row-reverse;
+  }
+
+  .feadback-text {
+    margin: 0 10px;
+  }
+}
+
+@media screen and (min-width:1020px) {
+  .container-feedback {
+    /* position: relative;  父層相對定位：讓腳印能定位 */
+
+    background-image:
+      url(picture/back/right.png),
+      /* 右上腳印 */
+      url(picture/back/lift.png);
     /* 左下腳印 */
 
     background-repeat: no-repeat, no-repeat;
@@ -192,8 +258,10 @@
     transition: transform .5s .1s;
   }
   .feadback-text:hover{
+    color: rgb(65, 55, 55);
     transform: translateY(-10px);
   } 
+  
  .feadback-text p:nth-of-type(2){
   line-height: 35px;
  
@@ -201,21 +269,13 @@
 }
 
 .more {
-  width: 90px;
-  /* height: 40px; */
-  border: 1px solid #FFBCA3;
-  border-radius: 45px;
-  background-color: #FFBCA3;
-  margin: auto;
-  font-size: 20px;
-  text-align: center;
-  padding: 8px 20px;
+  padding: 20px 25px;
 }
 
 .more a {
   color: #000000;
   text-decoration: none;
-  font-family: "Noto Sans TC";
+  font-size: 30px;
 }
 
 .more:hover {

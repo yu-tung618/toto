@@ -1,12 +1,10 @@
-/* body {
-  box-sizing: border-box;
-  background-image: url(picture/back/brushed-alum-dark-1920x10802.png);
-} */
-
-
-
+.noto-sans-tc-uniquifier {
+  font-family: "Noto Sans TC", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: weight;
+  font-style: normal;
+}
 .banner {
-  width: 100%;
   /* max-width: 1920px; */
   margin-top: 35px;
   background-image:
@@ -40,7 +38,6 @@
   font-weight: bold;
   letter-spacing: 1.2px;
   position: relative;
-  font-family: "Noto Sans TC";
 }
 
 .banner-text small {
@@ -52,11 +49,11 @@
 @media screen and (min-width:768px) {
   .banner {
     background-position:
-      bottom right 40px,
+      bottom right,
       center,
       bottom center;
     background-size:
-      22%,
+      30%,
       /* 第一層圖片縮小到容器寬度的 40% */
       100%,
       /* 第二層漸層覆蓋整個背景 */
@@ -65,54 +62,68 @@
   }
 
   .banner-text {
-    font-size: 30px;
-    padding: 100px;
-    margin-left: 80px;
+    padding: 80px;
+    margin-left: 10px;
     margin-top: 50px;
-    letter-spacing: 4.8px;
+    letter-spacing: 3px;
+    font-size: 20px;
   }
 
   .banner-text small {
     display: block;
-    font-size: 20px;
+    color: #242424;
+    font-size: 16px;
     position: absolute;
     bottom: 50px;
-    left: 100px;
+    left: 80px;
+    font-weight: 500;
   }
 }
 
-@media screen and (width>1280px) {
+@media screen and (min-width:1020px) {
   .banner {
     /* margin-top: 150px; */
     background-size:
       18%,
-      /* 第一層圖片縮小到容器寬度的 40% */
       100%,
       /* 第二層漸層覆蓋整個背景 */
       cover;
     /* 第三層鋪滿底圖 */
     background-position:
-      bottom right 80px,
+      bottom right,
       center,
       bottom center;
   }
 
   .banner-text {
-    font-size: 40px;
+    font-size: 30px;
+    margin-left: 100px;
+  }
+  .banner-text small {
+    font-size: 20px;
+    position: absolute;
+    bottom: 40px;
   }
 }
-
-.container-medical {
-  width: 100%;
+.container-medical{
+  padding: 0 20px;
 }
-
+.wrap-flex{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.medical-card{
+  box-sizing: border-box;
+  /* width: 362px; */
+}
 .medical-title h2 {
   text-align: center;
   margin-top: 50px;
+  margin-bottom: -20px;
   font-size: 20px;
   font-weight: bold;
   letter-spacing: 1.2px;
-  font-family: "Noto Sans TC";
 }
 
 .medical-pic {
@@ -123,9 +134,10 @@
   box-shadow: 0 1px 2px #F4906B;
   border-radius: 50%;
   margin: auto;
-  margin-top: 40px;
+  margin-top: 10px;
   margin-bottom: 10px;
   text-align: center;
+  transform: translateY(50px);
 }
 
 .medical-pic img {
@@ -139,7 +151,6 @@
   font-size: 20px;
   font-weight: bold;
   list-style: 1.2px;
-  font-family: "Noto Sans TC";
 }
 
 .medical-text {
@@ -148,7 +159,7 @@
   border-radius: 20px;
   border-bottom: 5px solid #a0c49d;
   border-right: 3px solid #a0c49d;
-  padding-bottom: 20px;
+  padding: 30px 10px 20px 10px;
 }
 
 .medical-text p {
@@ -157,8 +168,7 @@
   width: fit-content;
   padding: 0 20px;
   letter-spacing: 1.2px;
-  line-height: 30px;
-  font-family: "Noto Sans TC";
+  line-height: 28px;
 }
 
 .medical-text p:nth-child(1) {
@@ -166,32 +176,53 @@
   font-weight: bold;
   padding-bottom: 5px;
 }
+.medical-card a{
+  text-decoration: none;
+  color: black;
+}
 
-
-
-@media screen and (min-width:768px) {
-  .container-medical {
+@media screen and (min-width:768px){
+   .container-medical {
+    padding: 0 80px;
     background-image:
       url(picture/back/right.png),
       /* 右上腳印 */
-      url(picture/back/left.png);
+      url(picture/back/lift.png);
     /* 左下腳印 */
 
     background-repeat: no-repeat, no-repeat;
 
     background-position:
-      right 40px top 40px,
+      right 20px top 30px,
       /* 調整右上腳印 */
-      left 40px bottom 40px;
+      left 10px bottom 300px;
     /* 調整左下腳印 */
 
     background-size:
-      40%,
+      50%,
       /* 右上腳印大小 */
-      35%;
+      50%;
     /* 左下腳印大小 */
-  }
+}
 
+
+.medical-card {
+    width: 300px;
+    display: flex;
+    flex-direction: column;
+  }
+ 
+}
+@media screen and (min-width:1020px) {
+  .container-medical{
+    padding: 0 20px;
+    background-position:
+    right 40px top 30px,
+    left 10px bottom 300px;
+    background-size:
+    30%;
+    
+  }
   .medical-title h2 {
     text-align: center;
     margin-top: 70px;
@@ -201,20 +232,22 @@
     letter-spacing: 4.8px;
   }
 
-  .medical-card {
-    display: flex;
-    justify-self: center;
-    align-items: center;
-    margin-top: 20px;
+  .wrap-flex{
+    flex-direction: row;
+    align-items: flex-start;
+    justify-content: space-evenly;
   }
 
-  .medical-card:nth-child(odd) {
-    flex-direction: row-reverse;
+  .medical-card {
+    width: 300px;
+    display: flex;
+    flex-direction: column;
   }
+
 
   .medical-text {
-    margin-left: 50px;
-    line-height: 30px;
+    /* margin-left: 50px;
+    line-height: 30px; */
     letter-spacing: 3px;
     transition: color .5s .1s;
     transition: transform .5s .1s;
@@ -222,17 +255,17 @@
   }
 
   .medical-text:hover {
-    color: rgb(53, 51, 51);
+    color: rgb(65, 55, 55);
     transform: translateY(-10px);
-    background-color: #FFBCA3;
-    border-bottom: 5px solid #F4906B;
-    border-right: 3px solid #F4906B;
   }
 
-  .medical-card:nth-child(odd) .medical-text {
+  .medical-pic{
+    z-index: 1;
+  }
+  /* .medical-card:nth-child(odd) .medical-text {
     margin-right: 50px;
-  }
-
+  } */
+/* 
   .medical-text p:nth-child(1) {
     padding-bottom: 8px;
   }
@@ -247,5 +280,6 @@
 
   .container-medical>.medical-card:nth-child(6) {
     margin-top: 40px;
-  }
+  } */
+
 }
