@@ -346,37 +346,94 @@
    margin-right: 10px;
 }
 }
-
 .container-hospital {
   background-color: #fff4e285;
-  margin-bottom: -40px;
-  margin-top: 30px;
+  margin: 30px 0 -40px;
+  padding-bottom: 40px;
 }
 
 .hospital-title h2 {
-  padding-top: 30px;
-  padding-bottom: 20px;
   text-align: center;
   font-size: 20px;
   font-weight: bold;
+  padding: 30px 0 20px;
   letter-spacing: 1.2px;
-  font-family: "Noto Sans TC";
 }
 
-.hospital-pic-wrap {
+.slider {
+  position: relative;
+  width: 90%;
+  max-width: 800px;
+  height: auto; /* 高度自適應圖片 */
+  margin: 20px auto;
+  overflow: hidden;
+}
+
+.slides {
   display: flex;
-  padding-bottom: 30px;
+  width: 100%;
+  height: 100%;
+  transition: transform 0.5s ease-in-out;
 }
 
-.hospital-pic-wrap .hospital-pic:nth-child(2),
-.hospital-pic-wrap .hospital-pic:nth-child(3) {
-  display: none;
-  /*記得到時候刪掉*/
+.hospital-pic {
+  flex: 0 0 100%; /* flex: 0 0 100%; 是 flex-grow、flex-shrink 和 flex-basis 三個屬性的縮寫,每張圖片占整個寬度 */
+  height: 100%;
 }
 
 .hospital-pic img {
-  width: 350px;
+  width: 100%;
+  height: 100%;
+  object-fit: contain; /*用於在不變形的情況下，將媒體內容（如圖片、影片）縮放到完整顯示於容器內*/
 }
+
+.prev, .next {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background-color: rgba(112, 112, 112, 0.212);
+  color: rgba(255, 255, 255, 0.767);
+  border: none;
+  font-size: 24px;
+  padding: 8px 12px;
+  cursor: pointer;
+  border-radius: 50%;
+  z-index: 10;
+  display: block;
+}
+
+.prev { left: 10px; }
+.next { right: 10px; }
+
+.dots {
+  position: absolute;
+  bottom: 10px;
+  width: 100%;
+  text-align: center;
+}
+
+.dot { /*加入js*/
+  display: inline-block;
+  width: 12px;
+  height: 12px;
+  margin: 0 5px;
+  background-color: rgba(255,255,255,0.5);
+  border-radius: 50%;
+  cursor: pointer;
+}
+
+.dot.active {/*加入js*/
+  background-color: white;
+}
+
+@media screen and (max-width: 480px) {
+  .prev, .next {
+    font-size: 18px;
+    padding: 6px 10px;
+    display: none;
+  }
+}
+
 
 @media screen and (min-width:768px) {
   .container-hospital {
@@ -393,28 +450,5 @@
   .hospital-pic-wrap {
     padding-bottom: 50px;
   }
-
-  .hospital-pic {
-    margin-right: 10px;
-    margin-left: 20px;
-  }
-
-  .hospital-pic-wrap .hospital-pic:nth-child(3) {
-    display: inline-block;
-    /*記得到時候刪掉*/
-  }
-
-  .hospital-pic img {
-    width: 550px;
-    margin-right: 25px;
-    margin-left: 25px;
-  }
 }
 
-@media screen and (min-width:1440px) {
-
-  .hospital-pic-wrap .hospital-pic:nth-child(2) {
-    display: inline-block;
-    /*記得到時候刪掉*/
-  }
-}

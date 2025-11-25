@@ -1,0 +1,91 @@
+window.onload=function(){
+const slides = document.querySelector('.slides');
+const images = document.querySelectorAll('.slides .hospital-pic');
+const prev = document.querySelector('.prev');
+const next = document.querySelector('.next');
+const dotsContainer = document.querySelector('.dots');
+
+let index = 0; //目前輪播到第幾張圖片（從 0 開始計數）
+let isDragging = false; //用來判斷使用者 是否正在拖曳滑鼠或手指,這樣 JS 就知道什麼時候要移動輪播，什麼時候不要
+let startX = 0; //記錄拖曳開始時的 X 座標
+let currentTranslate = 0; //主要用於拖曳時即時更新圖片位置
+let animationID = 0;//用來存 requestAnimationFrame 的 ID拖曳動畫 JS 會用 requestAnimationFrame 持續更新位置結束拖曳或重置動畫時，用 cancelAnimationFrame(animationID) 停掉動畫
+
+// 生成小圓點
+images.forEach((_, i) => {//forEach 是迴圈，每張圖片都會跑一次,_不需要用到元素本身，只用到索引 i 來生成小圓點，所以就寫成 _，這是一個程式慣例：）
+  const dot = document.createElement('span');//建立一個新的 <span> 元素,這個 <span> 會變成小圓點
+  dot.classList.add('dot');//給這個 <span> 加上 dot class
+  if(i === 0) dot.classList.add('active');//第一個小圓點（i === 0）加上 active class這表示初始狀態第一張圖片被選中,CSS 會用 .dot.active 顯示成白色或高亮
+  dot.addEventListener('click', () => {
+    showSlide(i); //顯示對應的圖片
+    resetInterval(); //重置自動輪播計時器（避免點了小圓點後立刻切換下一張）
+  });
+  dotsContainer.appendChild(dot); //把剛建立的小圓點 <span> 放進 .dots 容器裡,這樣頁面上就會看到小圓點
+});
+const dots = document.querySelectorAll('.dot');//迴圈結束後，把 .dots 容器裡的所有 .dot 元素抓出來,存到 dots 陣列，方便之後用來控制哪個小圓點是 active
+
+// 顯示指定圖片
+function showSlide(i) { //這一行是 定義一個函數，名字叫 showSlide，可以傳入一個參數 i,i 代表要顯示第幾張圖片（從 0 開始）,之後在程式裡，無論是點擊小圓點、按左右按鈕、或拖曳結束，都會呼叫這個函數來切換圖片
+  if(i < 0) index = images.length - 1; //images.length - 1 → 跳到最後一張
+  else if(i >= images.length) index = 0;//如果 i >= images.length，表示要切換到最後一張之後,這時候把 index 設為 0 → 跳回第一張
+  else index = i;
+
+  slides.style.transition = 'transform 0.5s ease-in-out';//建議css和js都寫
+  slides.style.transform = `translateX(${-index * 100}%)`;//這行控制輪播容器 水平移動,-index * 100% 表示：第 0 張 → translateX(0%) → 不動,第 1 張 → translateX(-100%) → 往左移一個容器寬度,第 2 張 → translateX(-200%) → 往左移兩個容器寬度,因為每張圖片佔 100% 寬度，所以這樣可以正好切換到對應圖片
+
+  dots.forEach(dot => dot.classList.remove('active'));//這行把 所有小圓點的高亮樣式移除
+  dots[index].classList.add('active');//把 目前圖片對應的小圓點加上 active class
+}
+
+// 左右按鈕
+prev.addEventListener('click', () => { showSlide(index - 1); resetInterval(); }); //假設現在 index 是 2（第三張圖）,index - 1 → 1就是第二張。也就是：把圖片切到前一張
+next.addEventListener('click', () => { showSlide(index + 1); resetInterval(); });//避免：還沒看完圖片就被自動跳走,自動播放的時間亂掉,resetInterval()不需要參數
+
+// 自動輪播
+let autoSlide = setInterval(() => { showSlide(index + 1); }, 3000);//setInterval()：每隔一段時間執行裡面的程式,showSlide(index + 1) → 跳到下一張,每 3000 毫秒（3 秒） 執行一次
+function resetInterval() {
+  clearInterval(autoSlide); //停止之前的 setInterval,停止「每 3 秒換下一張」的程式
+  autoSlide = setInterval(() => { showSlide(index + 1); }, 3000);//重新設一個新的計時器,每 3 秒繼續自動輪播
+}
+
+// ===== 拖曳功能 =====
+slides.addEventListener('mousedown', dragStart);
+slides.addEventListener('touchstart', dragStart);
+
+slides.addEventListener('mousemove', dragMove);
+slides.addEventListener('touchmove', dragMove);
+
+slides.addEventListener('mouseup', dragEnd);
+slides.addEventListener('touchend', dragEnd);
+
+slides.addEventListener('mouseleave', dragEnd);
+
+function dragStart(e) {
+  isDragging = true;
+  startX = e.type.includes('mouse') ? e.pageX : e.touches[0].clientX;//? 三元運算子（if 的縮寫）,如果條件成立 → 回傳「? 後面這個」如果條件不成立 → 回傳「: 後面這個」
+  slides.style.transition = 'none';//要讓圖片 “跟著你的手指即時移動”,如果 transition 還開著，會滑得很卡、延遲、拖不動
+  cancelAnimationFrame(animationID);//如果前一個動畫正在跑，先把它停止
+}
+
+function dragMove(e) {
+  if(!isDragging) return;//結束函式
+  const x = e.type.includes('mouse') ? e.pageX : e.touches[0].clientX;
+  const moveX = x - startX;//算出 拖曳的水平距離,公式：目前座標 - 起始座標
+  slides.style.transform = `translateX(${-index * 100 + moveX / slides.clientWidth * 100}%)`;//-index * 100,控制圖片本身「切到第幾張」,每張圖片佔 100% 寬度,例如 index = 2 → translateX(-200%) → 顯示第 3 張圖片,slides.clientWidth 是輪播區寬度,MoveX / slides.clientWidth * 100 → 移動多少 %
+}
+
+function dragEnd(e) {
+  if(!isDragging) return;
+  isDragging = false;//表示「拖曳結束
+  const x = e.type.includes('mouse') ? e.pageX : (e.changedTouches ? e.changedTouches[0].clientX : startX);
+  const diff = x - startX;
+
+  slides.style.transition = 'transform 0.5s ease-in-out';
+
+  if(diff > 50) showSlide(index - 1);
+  else if(diff < -50) showSlide(index + 1);
+  else showSlide(index);
+
+  resetInterval();
+}
+}

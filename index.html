@@ -13,12 +13,20 @@
     <link
         href="https://fonts.googleapis.com/css2?family=Chiron+GoRound+TC:wght@200..900&family=Noto+Sans+TC:wght@100..900&display=swap"
         rel="stylesheet">
-        <link rel="stylesheet"
+    <link rel="stylesheet"
         href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200&icon_names=close" />
 </head>
 
 
 <body>
+
+    <!-- 動畫容器 -->
+<div id="intro-anim">
+    <img src="picture/LOGO/Copilot_20251119_201118-removebg-preview.png" class="intro-img dog ">
+    <img src="picture/LOGO/Copilot_20251119_201453-removebg-preview.png" class="intro-img cat">
+    <img src="picture/LOGO/Copilot_20251119_202115-removebg-preview.png" class="intro-img house">
+</div>
+
     <input type="checkbox" name="" id="menu-control">
 
     <div class="header" id="sheader">
@@ -29,11 +37,11 @@
             <span>選單</span>
         </label>
         <nav class="noto-sans-tc-uniquifier">
-             <label for="menu-control" class="menu-btn1">
-                    <span class="material-symbols-outlined">
-                        close
-                    </span>
-                </label>
+            <label for="menu-control" class="menu-btn1">
+                <span class="material-symbols-outlined">
+                    close
+                </span>
+            </label>
             <a href="index.html">首頁</a>
             <a href="about.html">關於我們</a>
             <a href="contact.html">預約須知</a>
@@ -42,7 +50,7 @@
         </nav>
     </div>
 
-    <div class="banner">
+    <div class="banner" id=>
         <div>
             <h1 class="noto-sans-tc-uniquifier"> 以待自己寵物的心情<br>提供細緻入微的照護</h1>
         </div>
@@ -129,7 +137,7 @@
                     本院沒有特約停車場。
                 </div>
             </div>
-            <div class="faq-cat">
+            <div class="faq-foot">
                 <img src="picture/back/lift.png" alt="">
             </div>
         </div>
@@ -170,6 +178,8 @@
             </div>
         </div>
     </footer>
+
+    <script src="home.js"></script>
 </body>
 
 </html>
