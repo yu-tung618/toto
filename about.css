@@ -74,7 +74,7 @@
   }
 }
 
-@media screen and (min-width:1020px) {
+@media screen and (min-width:1024px) {
   .banner {
     /* margin-top: 150px; */
     background-size:
@@ -92,6 +92,7 @@
   .banner-text {
     font-size: 30px;
     margin-left: 100px;
+    margin-top: 80px;
   }
   .banner-text small {
     font-size: 20px;
@@ -167,7 +168,7 @@
   background-color: #F4906B;
 }
 
-@media screen and (min-width:1020px) {
+@media screen and (min-width:1024px) {
   .container-about {
     background-image:
       url(picture/back/right.png);
@@ -278,7 +279,7 @@
   justify-content: space-evenly;
 }
 }
-@media screen and (min-width:1020px) {
+@media screen and (min-width:1024px) {
   .container-team {
     background-image:
       url(picture/back/lift.png);

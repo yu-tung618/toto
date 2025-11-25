@@ -4,14 +4,14 @@
   font-weight: weight;
   font-style: normal;
 }
-@media screen and (min-width:1020px){
+@media screen and (min-width:1024px){
   body{
     margin-top: 90px;
     background-image:
       url(picture/back/right.png);
     background-repeat: no-repeat;
     background-position:
-      left 40px top 280px;
+      left 40px top 80px;
     background-size:
       30%;
   
@@ -55,15 +55,11 @@
   .banner {
     background-position:
       bottom right 60px,
-      center,
-      bottom center;
+      center;
     background-size:
       45%,
       /* 第一層圖片縮小到容器寬度的 40% */
-      100%,
-      /* 第二層漸層覆蓋整個背景 */
-      cover;
-    /* 第三層鋪滿底圖 */
+      100%;
   }
 
   .banner-text {
@@ -85,24 +81,21 @@
   }
 }
 
-@media screen and (min-width:1020px) {
+@media screen and (min-width:1024px) {
   .banner {
     /* margin-top: 150px; */
     background-size:
-      30%,
-      100%,
-      /* 第二層漸層覆蓋整個背景 */
-      cover;
-    /* 第三層鋪滿底圖 */
+      36%,
+      100%;
     background-position:
       bottom right 90px,
-      center,
-      bottom center;
+      center;
   }
 
   .banner-text {
     font-size: 30px;
     margin-left: 100px;
+    margin-top: 80px;
   }
   .banner-text small {
     font-size: 20px;
@@ -183,7 +176,7 @@
   z-index: 1000;
 }
 
-@media screen and (min-width:1020px) {
+@media screen and (min-width:1024px) {
   .container-time {
     margin-left: 0;
     margin-right: 0;
@@ -259,7 +252,7 @@
   margin-left: 20px;
 }
 
-@media screen and (min-width:1020px) {
+@media screen and (min-width:1024px) {
   .container-reserve {
     margin-top: 90px;
     background-image:

@@ -53,7 +53,7 @@
 
 }
 
-@media screen and (min-width:1020px) {
+@media screen and (min-width:1024px) {
   .banner {
     height: 550px;
     /* margin-top: 150px; */
@@ -148,7 +148,7 @@
   }
 }
 
-@media screen and (min-width:1020px) {
+@media screen and (min-width:1024px) {
   .container-about {
     background-position: right 10px bottom -30px;
   }
@@ -284,7 +284,7 @@
   }
 }
 
-@media screen and (min-width:1020px) {
+@media screen and (min-width:1024px) {
   .container-serve {
     display: flex;
     flex-direction: column;
@@ -431,7 +431,7 @@
   }
 }
 
-@media screen and (min-width:1020px) {
+@media screen and (min-width:1024px) {
   .container-faq-box {
     margin: auto;
     margin-top: 67px;

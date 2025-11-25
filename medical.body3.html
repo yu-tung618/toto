@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TOTO動物醫院</title>
+    <link rel="stylesheet" href="reset.css">
+    <link rel="stylesheet" href="medical-body.css">
+    <link rel="stylesheet" href="hf.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Chiron+GoRound+TC:wght@200..900&family=Noto+Sans+TC:wght@100..900&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200&icon_names=close" />
+    <style>
+        body {
+            background-image: url(picture/back/right.png), url(picture/back/lift.png), url(picture/back/right.png), url(picture/back/lift.png);
+            background-repeat: no-repeat;
+            background-position: left 20px top 200px, right 20px bottom 500px, right 40px top 600px, left 10px top 1200px;
+            background-size: 30%, 30%;
+        }
+
+        @media screen and (min-width:768px) {
+            body {
+                background-image: url(picture/back/right.png), url(picture/back/lift.png), url(picture/images/Mask\ group-1.png), url(picture/images/Mask\ group.png);
+                background-repeat: no-repeat;
+                background-position: left 20px top 200px, right 20px bottom 200px, left 40px top 500px, right 60px bottom 600px;
+                background-size: 30%, 30%, 15%, 15%;
+            }
+        }
+
+        @media screen and (min-width:1024px) {
+            body {
+                background-image: url(picture/back/right.png), url(picture/back/lift.png), url(picture/images/Mask\ group-1.png), url(picture/images/Mask\ group.png);
+                background-repeat: no-repeat;
+                background-position: left 20px top 230px, right 20px bottom 200px, left 80px top 630px, right 100px bottom 600px;
+                background-size: 30%, 30%, 17%, 17%;
+            }
+        }
+
+        @media screen and (min-width:1440px) {
+            body {
+                background-image: url(picture/back/right.png), url(picture/back/lift.png), url(picture/images/Mask\ group-1.png), url(picture/images/Mask\ group.png);
+                background-repeat: no-repeat;
+                background-position: left 20px top 230px, right 20px bottom 200px, left 100px top 690px, right 100px bottom 660px;
+                background-size: 30%, 30%, 17%, 17%;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <input type="checkbox" name="" id="menu-control">
+        <div class="header">
+            <h1 class="logo">
+                <a href="index.html"><img src="picture/LOGO/logo ok.png" alt="logo"></a>
+            </h1>
+            <label for="menu-control" class="menu-btn">
+                <span>選單</span>
+            </label>
+            <nav class="noto-sans-tc-uniquifier">
+                <label for="menu-control" class="menu-btn1">
+                    <span class="material-symbols-outlined">
+                        close
+                    </span>
+                </label>
+                <a href="index.html">首頁</a>
+                <a href="about.html">關於我們</a>
+                <a href="contact.html">預約須知</a>
+                <a href="medical.html">醫療服務</a>
+                <a href="feedback.html">飼主回饋</a>
+            </nav>
+        </div>
+    </header>
+
+    <div class="banner">
+        <div class="banner-text noto-sans-tc-uniquifier">
+            <h2>家醫科
+                <small>
+                    守護毛孩每一個細微變化，讓健康從日常開始被看見、被照顧
+                </small>
+            </h2>
+        </div>
+    </div>
+
+    <section>
+        <div class="container">
+            <div class="wrap">
+                <div class="title noto-sans-tc-uniquifier">
+                    <h2>家醫科｜毛孩的日常健康守門人</h2>
+                    <p>動物家醫科（Family Medicine / General
+                        Practice）是毛孩進入醫療體系的第一站，也是最貼近日常、最了解牠們生活樣貌的科別。透過全面性的身體評估、疾病預防、健康追蹤與生活管理，我們不僅治療生病的毛孩，更陪伴牠們維持良好的生活品質。
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section>
+        <div class="container">
+            <div class="wrap">
+                <div class="card">
+                    <div class="title noto-sans-tc-uniquifier">
+                        <h3>一. 全面性的身體檢查與問診
+
+
+                        </h3>
+                    </div>
+                    <div class="text noto-sans-tc-uniquifier">
+                        <p>家醫科透過完整問診，了解毛孩飲食、活動力、排便、喝水量、既往病史與生活習慣。 搭配觸診、聽診、體溫、皮膚、口腔、四肢關節等全身檢查，能及早發現：</p>
+                        <ul>
+                            <li>皮膚與耳朵發炎</li>
+                            <li>腸胃道問題（拉肚子、嘔吐、脹氣）</li>
+                            <li>呼吸系統狀況</li>
+                            <li>泌尿道問題（血尿、頻尿、結晶）</li>
+                            <li>關節疼痛與退化</li>
+                            <li>口腔異味或牙齒疾病</li>
+                            <li>行為異常或食慾改變</li>
+                            <li>高齡疾病的初期徵兆</li>
+                        </ul>
+                        <p>許多病症在早期沒有明顯外表症狀，因此定期檢查是維持健康的重要關鍵。</p>
+                    </div>
+                </div>
+
+                <div class="card">
+                    <div class="title noto-sans-tc-uniquifier">
+                        <h3> 二、基礎預防醫學：疫苗 × 驅蟲 × 年度健檢</h3>
+                    </div>
+                    <div class="text noto-sans-tc-uniquifier">
+                        <p>家醫科負責規劃每隻毛孩專屬的預防計畫，包括：</p>
+                        <ul>
+                            <li>犬貓核心疫苗
+                            </li>
+                            <li>狂犬病疫苗</li>
+                            <li>體內外寄生蟲預防（跳蚤、心絲蟲、腸道寄生蟲）</li>
+                            <li>年度健康檢查（血檢、尿檢、X光、超音波依個體而定）</li>
+                            <p>預防勝於治療，尤其是在高齡化的毛孩族群中，「每年追蹤」能早一步發現重大疾病。</p>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="card">
+                    <div class="title noto-sans-tc-uniquifier">
+                        <h3> 三、常見疾病的初步檢查與治療</h3>
+                    </div>
+                    <div class="text noto-sans-tc-uniquifier">
+                        <p>家醫科處理許多毛孩日常會遇到的症狀，包括：</p>
+                        <ul>
+                            <li>嘔吐、腹瀉、食慾下降</li>
+                            <li>咳嗽、呼吸喘</li>
+                            <li>血尿、頻尿、黏土砂結晶</li>
+                            <li>皮膚紅腫、掉毛、搔癢</li>
+                            <li>耳朵分泌物增加</li>
+                            <li>眼睛分泌物或角膜發炎</li>
+                            <li>關節僵硬、跛行</li>
+                            <li>情緒緊張、生活壓力引起的問題</li>
+                        </ul>
+                        <p>藉由基本影像、血液檢查、尿檢、皮膚刮片等檢查方式，可提供初步診斷與改善治療。</p>
+                    </div>
+                </div>
+
+                <div class="card">
+                    <div class="title noto-sans-tc-uniquifier">
+                        <h3> 四、轉診與長期追蹤管理</h3>
+                    </div>
+                    <div class="text">
+                        <p>家醫科醫師會依據毛孩的病況，協助安排：</p>
+                        <ul>
+                            <li>內科</li>
+                            <li>外科</li>
+                            <li>牙科</li>
+                            <li>影像科</li>
+                            <li>皮膚科</li>
+                            <li>行為醫學</li>
+                        </ul>
+                        <p>讓毛孩在每一個疾病階段，都能獲得最適合的專科照護,同時，我們會進行病史追蹤，確保治療後的改善情形能被完整記錄與分析。</p>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+        </div>
+    </section>
+
+
+
+    <footer>
+        <div class="container-footer">
+            <div class="footer-logo">
+                <img src="picture/LOGO/logo ok.png" alt="logo">
+            </div>
+            <div class="footer-colum">
+                <div class="footer-text noto-sans-tc-uniquifier">
+                    <p>預約專線 : </p>
+                    <p>03-9561195</p>
+                </div>
+                <div class="footer-text noto-sans-tc-uniquifier">
+                    <p>地址 : </p>
+                    <p>宜蘭縣羅東鎮忠孝路133號</p>
+                </div>
+                <div class="footer-text noto-sans-tc-uniquifier">
+                    <p>停車場 : </p>
+                    <p>羅東公正國小地下停車場</p>
+                </div>
+                <div class="footer-text noto-sans-tc-uniquifier">
+                    <p>email : </p>
+                    <p>toothtooth@gmail.com</p>
+                </div>
+            </div>
+            <div class="footer-icon">
+                <a href="#"><img src="picture/icon/line.png" alt="line"></a>
+                <a href="#"><img src="picture/icon/fb.png" alt="fb"></a>
+                <a href="#"><img src="picture/icon/ig.png" alt="ig"></a>
+            </div>
+        </div>
+    </footer>
+</body>
+
+</html>
