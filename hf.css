@@ -307,3 +307,9 @@ nav a:hover {
     margin-right: 20px;
   }
 }
+
+@media screen and (min-width:1024px){
+html, body {
+  cursor: url('picture/images/foot.png') 8 6, auto;
+}
+}

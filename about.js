@@ -5,7 +5,7 @@ const prev = document.querySelector('.prev');
 const next = document.querySelector('.next');
 const dotsContainer = document.querySelector('.dots');
 
-let index = 0; //目前輪播到第幾張圖片（從 0 開始計數）
+let index = 1; //目前輪播到第幾張圖片（從 0 開始計數）
 let isDragging = false; //用來判斷使用者 是否正在拖曳滑鼠或手指,這樣 JS 就知道什麼時候要移動輪播，什麼時候不要
 let startX = 0; //記錄拖曳開始時的 X 座標
 let currentTranslate = 0; //主要用於拖曳時即時更新圖片位置
@@ -25,17 +25,18 @@ images.forEach((_, i) => {//forEach 是迴圈，每張圖片都會跑一次,_不
 const dots = document.querySelectorAll('.dot');//迴圈結束後，把 .dots 容器裡的所有 .dot 元素抓出來,存到 dots 陣列，方便之後用來控制哪個小圓點是 active
 
 // 顯示指定圖片
-function showSlide(i) { //這一行是 定義一個函數，名字叫 showSlide，可以傳入一個參數 i,i 代表要顯示第幾張圖片（從 0 開始）,之後在程式裡，無論是點擊小圓點、按左右按鈕、或拖曳結束，都會呼叫這個函數來切換圖片
-  if(i < 0) index = images.length - 1; //images.length - 1 → 跳到最後一張
-  else if(i >= images.length) index = 0;//如果 i >= images.length，表示要切換到最後一張之後,這時候把 index 設為 0 → 跳回第一張
-  else index = i;
+function showSlide(i) {
+  index = i; // 不再做邊界判斷，直接移動到指定 index
+  slides.style.transition = 'transform 0.5s ease-in-out';
+  slides.style.transform = `translateX(-${index * 100}%)`;
+}
 
   slides.style.transition = 'transform 0.5s ease-in-out';//建議css和js都寫
   slides.style.transform = `translateX(${-index * 100}%)`;//這行控制輪播容器 水平移動,-index * 100% 表示：第 0 張 → translateX(0%) → 不動,第 1 張 → translateX(-100%) → 往左移一個容器寬度,第 2 張 → translateX(-200%) → 往左移兩個容器寬度,因為每張圖片佔 100% 寬度，所以這樣可以正好切換到對應圖片
 
   dots.forEach(dot => dot.classList.remove('active'));//這行把 所有小圓點的高亮樣式移除
   dots[index].classList.add('active');//把 目前圖片對應的小圓點加上 active class
-}
+
 
 // 左右按鈕
 prev.addEventListener('click', () => { showSlide(index - 1); resetInterval(); }); //假設現在 index 是 2（第三張圖）,index - 1 → 1就是第二張。也就是：把圖片切到前一張
@@ -88,4 +89,18 @@ function dragEnd(e) {
 
   resetInterval();
 }
+slides.addEventListener('transitionend', () => {
+  if (images[index].classList.contains('clone-first')) {
+    slides.style.transition = 'none'; // 取消動畫
+    index = 1; // 跳回真正的第一張
+    slides.style.transform = `translateX(-${index * 100}%)`;
+    setTimeout(() => slides.style.transition = 'transform 0.5s ease-in-out'); // 恢復動畫
+  }
+  if (images[index].classList.contains('clone-last')) {
+    slides.style.transition = 'none';
+    index = images.length - 2; // 跳回真正的最後一張
+    slides.style.transform = `translateX(-${index * 100}%)`;
+    setTimeout(() => slides.style.transition = 'transform 0.5s ease-in-out');
+  }
+});
 }
