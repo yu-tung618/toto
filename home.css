@@ -231,7 +231,7 @@
 }
 
 .container-serve {
-  margin-top: 30px;
+  margin-top: 50px;
 }
 
 .serve-flex {
@@ -249,6 +249,27 @@
 }
 
 .serve-pic {
+  /* width: 250px;
+  height: 250px;
+  border: 2px solid #FFBCA3;
+  border-radius: 50%;
+  box-shadow: 0 1px 2px #F4906B;
+  background-color: #F8E7CD;
+  text-align: center;
+  margin: auto; */
+  margin-bottom: 30px;
+  perspective: 1000px;/* 數值 越大 → 透視效果越平緩，看起來比較接近平面旋轉 */
+  
+  /* 初始：略帶隱藏與位移，等進視窗再翻 */
+  opacity: 0;
+  transform: translateY(30px);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/*動畫*/
+.card-inner {
   width: 250px;
   height: 250px;
   border: 2px solid #FFBCA3;
@@ -256,15 +277,20 @@
   box-shadow: 0 1px 2px #F4906B;
   background-color: #F8E7CD;
   text-align: center;
-  margin: auto;
-  margin-bottom: 30px;
-
+  display: flex;
+  flex-direction: column; /* 圖片在上，文字在下 */
+  align-items: center;
+  justify-content: center;
+  transform-style: preserve-3d; /* 沒有這行的話，子元素的 3D 旋轉會被「壓扁」成平面，看不到立體感。 */
+  backface-visibility: hidden;/* 隱藏元素的「背面」。  當卡片旋轉到背面時，不會看到鏡像或反轉的正面，而是直接隱藏，讓翻卡效果更自然。 */
+  transition: transform 900ms cubic-bezier(.2,.8,.2,1), opacity 400ms ease, filter 400ms ease;
+  transform: rotateY(-180deg);
+  /* CSS 裡，filter 是一個用來對元素套用「圖像處理效果」的屬性,,cubic-bezier(.2,.8,.2,1)是一條自訂的加速曲線，讓翻卡動畫前半段快速完成，後半段慢慢收尾，看起來更柔和自然。
+ */
 }
-
 .serve-pic img {
   width: 140px;
   height: 140px;
-  margin-top: 45px;
 }
 
 .serve-pic p {
@@ -272,12 +298,28 @@
   font-weight: 500;
   margin-top: 12px;
   letter-spacing: 1.2px;
-
 }
+
+/* 觸發翻卡：rotateY 回正 + 顯示 */
+.serve-pic.flip {
+  opacity: 1;
+  transform: translateY(0);
+}
+.serve-pic.flip .card-inner {
+  transform: rotateY(0deg);
+  /* rotateY 表示沿著 Y 軸（水平方向的垂直軸）旋轉。 */
+  filter: brightness(1);
+  /* brightness(1) 表示亮度維持原本的 100%（正常亮度） */
+}
+
+
+/* 依序延遲，讓三張圖不是同時翻（僅首次） */
+.serve-pic[data-index="1"].flip .card-inner { transition-delay: 0ms; }
+.serve-pic[data-index="2"].flip .card-inner { transition-delay: 150ms; }
+.serve-pic[data-index="3"].flip .card-inner { transition-delay: 300ms; }
 
 .serve-more {
   width: 90px;
-  /* height: 40px; */
   border: 1px solid #FFBCA3;
   border-radius: 45px;
   background-color: #FFBCA3;
@@ -285,20 +327,20 @@
   font-size: 20px;
   text-align: center;
   padding: 10px 8px;
-
 }
 
 @media screen and (min-width:768px) {
+  .card-inner {
+  width: 200px;
+  height: 200px;
+ 
+  }
   .serve-flex {
     display: flex;
     flex-direction: row;
-    justify-content: center;
+    justify-content: space-evenly;
   }
 
-  .serve-pic {
-    width: 200px;
-    height: 200px;
-  }
 
   .serve-pic img {
     width: 100px;
@@ -313,6 +355,10 @@
     justify-content: center;
     align-content: center;
   }
+  .card-inner {
+  width: 250px;
+  height: 250px;
+  }
 
   .serve {
     width: 960px;
@@ -322,7 +368,7 @@
   .serve-flex {
     display: flex;
     flex-direction: row;
-    justify-content: center;
+    justify-content: space-evenly;
   }
 
   .serve h2 {
@@ -332,15 +378,10 @@
     letter-spacing: 4.8px;
   }
 
-  .serve-pic {
-    width: 250px;
-    height: 250px;
-  }
 
   .serve-pic img {
     width: 130px;
     height: 130px;
-    margin-top: 45px;
     transition: all 0.5s ;
   }
 
@@ -359,7 +400,6 @@
   }
 
   .serve-pic:hover img{
-    /* background-color: #f8ae93; */
     width: 160px;
     height: 160px;
   }

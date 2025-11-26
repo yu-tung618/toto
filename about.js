@@ -5,7 +5,7 @@ const prev = document.querySelector('.prev');
 const next = document.querySelector('.next');
 const dotsContainer = document.querySelector('.dots');
 
-let index = 1; //目前輪播到第幾張圖片（從 0 開始計數）
+let index = 1; //目前輪播到第幾張圖片（從 1 開始計數）
 let isDragging = false; //用來判斷使用者 是否正在拖曳滑鼠或手指,這樣 JS 就知道什麼時候要移動輪播，什麼時候不要
 let startX = 0; //記錄拖曳開始時的 X 座標
 let currentTranslate = 0; //主要用於拖曳時即時更新圖片位置
