@@ -156,6 +156,26 @@
   text-align: center;
   padding: 20px 20px;
 }
+/* 
+動畫 */
+.left{
+  opacity: 0;
+  transform: translateX(-20%);
+  transition: all 1s ease-out;
+}
+.right{
+  opacity: 0;
+  transform: translateX(20%);
+  transition: all 1s ease-out;
+}
+.left.show{
+  opacity: 1;
+  transform: translateX(0);
+}
+.right.show{
+  opacity: 1;
+  transform: translateX(0);
+}
 
 @media screen and (min-width:768px) {
   .container-feedback {
@@ -242,12 +262,12 @@
     font-size: 20px;
     line-height: 30PX;
     letter-spacing: 3px;
-    transform: translateY(0);
+    margin-top: 0;
     transition: transform .5s .1s;
   }
   .feadback-text:hover{
     color: rgb(65, 55, 55);
-    transform: translateY(-10px);
+    margin-top: 10px;
   } 
   
  .feadback-text p:nth-of-type(2){
