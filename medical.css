@@ -115,7 +115,6 @@
 }
 .medical-card{
   box-sizing: border-box;
-  /* width: 362px; */
 }
 .medical-title h2 {
   text-align: center;
@@ -165,8 +164,6 @@
 }
 
 .medical-text p {
-  /* width: 290px; */
-  /* margin-left: 75px; */
   width: fit-content;
   padding: 0 20px;
   letter-spacing: 1.2px;
@@ -234,7 +231,7 @@
 
 
 .medical-card {
-    width: 300px;
+    width: 400px;
     display: flex;
     flex-direction: column;
   }
@@ -299,24 +296,5 @@
     font-weight: 500;
     text-decoration: underline;
   }
-  /* .medical-card:nth-child(odd) .medical-text {
-    margin-right: 50px;
-  } */
-/* 
-  .medical-text p:nth-child(1) {
-    padding-bottom: 8px;
-  }
-
-  .medical-text p {
-    width: 520px;
-    font-size: 20px;
-    margin-left: 10px;
-    letter-spacing: 3px;
-    line-height: 35px;
-  }
-
-  .container-medical>.medical-card:nth-child(6) {
-    margin-top: 40px;
-  } */
 
 }
