@@ -194,7 +194,7 @@
 /*動畫*/
 .to-top{
   opacity: 0;
-  transform: translateY(30%);
+  transform: translateY(10%);
   transition:  opacity 1s ease-out, transform 1s ease-out;
 }
 

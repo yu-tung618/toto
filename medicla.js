@@ -9,7 +9,7 @@ window.onload=function(){
             animatedElements.forEach(element =>{
                 const elementTopPosition=element.getBoundingClientRect().top
                 //getBoundingClientRect() 是 DOM 方法，用來取得元素 相對於視窗的大小和位置,,forEach() = 陣列（array）的成員迴圈方法，用來「逐一處理每一個元素」
-                if(elementTopPosition<windowHeight*0.8){
+                if(elementTopPosition<windowHeight*1){
                     element.classList.add("show");
                 }// 頁面載入時先檢查一次,用途：在頁面剛載入時先檢查一次元素是否已經在視窗中。效果：確保「一打開網頁就出現的動畫」可以立即觸發。執行時機：只在頁面載入時執行一次。
             })
