@@ -121,7 +121,7 @@
 
 .about-text {
   background-color: #fff4e285;
-  transform: translateY(-50PX);
+  margin-top: -50px;
   border-radius: 10px;
   padding: 0 10px 30px;
   display: flex;
@@ -168,6 +168,35 @@
   background-color: #F4906B;
 }
 
+/*動畫區*/
+.scroll-about{
+  overflow: hidden;
+}
+
+.about-left,
+.about-right {
+    opacity: 0;
+    transition: all 1s ease-out;
+}
+
+/* 左邊圖片 */
+.about-left {
+    transform: translateX(-30%);
+}
+.about-left.show {
+    transform: translateX(0);
+    opacity: 1;
+}
+
+/* 右邊文字 */
+.about-right {
+    transform: translateX(30%);
+}
+.about-right.show {
+    transform: translateX(0);
+    opacity: 1;
+}
+
 @media screen and (min-width:1024px) {
   .container-about {
     background-image:
@@ -198,8 +227,7 @@
     width: 550px;
     margin-top: 130px;
     padding: 0 40px;
-    transform: translateY(30px);
-    transform: translateX(-30px);
+    margin-left: -30px;
   }
 
   .about-text h2 {
@@ -261,6 +289,21 @@
   font-weight: bold;
   padding-bottom: 5px;
   letter-spacing: 1px;
+}
+
+/*動畫*/
+.to-top{
+  opacity: 0;
+  transform: translateY(30%);
+  transition: all 1s ease-out;
+}
+.to-top.show{
+  transform:translateY(0) ;
+  opacity: 1;
+}
+.to-top.show{
+  transform: translateY(0);
+  opacity: 1;
 }
 
 @media screen and (min-width:768px) {

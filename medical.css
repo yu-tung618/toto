@@ -191,6 +191,7 @@
 .more-flex a{
   display: block;
   font-weight: 300;
+
 }
 
 
@@ -283,6 +284,8 @@
 
   .more-flex a:hover{
     color: #f07346;
+    font-weight: 500;
+    text-decoration: underline;
   }
   /* .medical-card:nth-child(odd) .medical-text {
     margin-right: 50px;
