@@ -13,7 +13,7 @@
   position: fixed;
   top: 0;
   left: 0;
-  z-index: 100;
+  z-index: 200;
 }
 
 .logo {
@@ -58,14 +58,15 @@
 }
 
 nav {
-  width: 80%;
+   width: 80%;
   height: 100vh;
   background-color: #f7d39a;
-  position: absolute;
-  top: 47px;
-  right: -1000px;
+  position: fixed;   /* ★ 修正，讓選單浮在 header 外 */
+  top: 47px;         /* 保持一樣，不跑到 header 上 */
+  right: -100%;
   transition: 0.5s;
-  z-index: 1;
+  z-index: 300;      /* ★ 保證比 overlay 高 */
+
 }
 
 nav a {
@@ -79,6 +80,19 @@ nav a {
 nav a:hover {
   color: #878787;
 }
+
+ /* 淡灰色背景 */
+  .overlay {
+    position: fixed;
+    inset: 0;
+    background: rgba(0,0,0,0.4);  /* 透明灰 */
+    display: none;
+    z-index: 150;
+  }
+
+  .overlay.active {
+    display: block;
+  }
 
 #menu-control:checked~.header nav {
   right: 0;
