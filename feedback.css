@@ -267,7 +267,7 @@
   }
   .feadback-text:hover{
     color: rgb(65, 55, 55);
-    margin-top: 10px;
+    margin-top: -15px;
   } 
   
  .feadback-text p:nth-of-type(2){
