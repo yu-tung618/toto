@@ -191,6 +191,20 @@
 
 }
 
+/* 淡灰色背景 */
+  .overlay {
+    position: fixed;
+    inset: 0;
+    background: rgba(0,0,0,0.4);  /* 透明灰 */
+    display: none;
+    z-index: 150;
+  }
+
+  .overlay.active {
+    display: block;
+  }
+
+
 /*動畫*/
 .to-top{
   opacity: 0;
