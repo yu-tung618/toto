@@ -249,20 +249,11 @@
 }
 
 .serve-pic {
-  /* width: 250px;
-  height: 250px;
-  border: 2px solid #FFBCA3;
-  border-radius: 50%;
-  box-shadow: 0 1px 2px #F4906B;
-  background-color: #F8E7CD;
-  text-align: center;
-  margin: auto; */
   margin-bottom: 30px;
   perspective: 1000px;/* 數值 越大 → 透視效果越平緩，看起來比較接近平面旋轉 */
-  
   /* 初始：略帶隱藏與位移，等進視窗再翻 */
   opacity: 0;
-  transform: translateY(30px);
+  /* transform: translateY(30px); */
   display: flex;
   align-items: center;
   justify-content: center;
@@ -303,7 +294,7 @@
 /* 觸發翻卡：rotateY 回正 + 顯示 */
 .serve-pic.flip {
   opacity: 1;
-  transform: translateY(0);
+  /* transform: translateY(0); */
 }
 .serve-pic.flip .card-inner {
   transform: rotateY(0deg);

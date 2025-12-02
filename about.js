@@ -59,18 +59,7 @@ let startX = 0; //記錄拖曳開始時的 X 座標
 let currentTranslate = 0; //主要用於拖曳時即時更新圖片位置
 let animationID = 0;//用來存 requestAnimationFrame 的 ID拖曳動畫 JS 會用 requestAnimationFrame 持續更新位置結束拖曳或重置動畫時，用 cancelAnimationFrame(animationID) 停掉動畫
 
-// 生成小圓點
-images.forEach((_, i) => {//forEach 是迴圈，每張圖片都會跑一次,_不需要用到元素本身，只用到索引 i 來生成小圓點，所以就寫成 _，這是一個程式慣例：）
-  const dot = document.createElement('span');//建立一個新的 <span> 元素,這個 <span> 會變成小圓點
-  dot.classList.add('dot');//給這個 <span> 加上 dot class
-  if(i === 0) dot.classList.add('active');//第一個小圓點（i === 0）加上 active class這表示初始狀態第一張圖片被選中,CSS 會用 .dot.active 顯示成白色或高亮
-  dot.addEventListener('click', () => {
-    showSlide(i); //顯示對應的圖片
-    resetInterval(); //重置自動輪播計時器（避免點了小圓點後立刻切換下一張）
-  });
-  dotsContainer.appendChild(dot); //把剛建立的小圓點 <span> 放進 .dots 容器裡,這樣頁面上就會看到小圓點
-});
-const dots = document.querySelectorAll('.dot');//迴圈結束後，把 .dots 容器裡的所有 .dot 元素抓出來,存到 dots 陣列，方便之後用來控制哪個小圓點是 active
+
 
 // 顯示指定圖片
 function showSlide(i) {
@@ -82,8 +71,6 @@ function showSlide(i) {
   slides.style.transition = 'transform 0.5s ease-in-out';//建議css和js都寫
   slides.style.transform = `translateX(${-index * 100}%)`;//這行控制輪播容器 水平移動,-index * 100% 表示：第 0 張 → translateX(0%) → 不動,第 1 張 → translateX(-100%) → 往左移一個容器寬度,第 2 張 → translateX(-200%) → 往左移兩個容器寬度,因為每張圖片佔 100% 寬度，所以這樣可以正好切換到對應圖片
 
-  dots.forEach(dot => dot.classList.remove('active'));//這行把 所有小圓點的高亮樣式移除
-  dots[index].classList.add('active');//把 目前圖片對應的小圓點加上 active class
 
 
 // 左右按鈕

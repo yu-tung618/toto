@@ -402,11 +402,10 @@
 
 .slider {
   position: relative;
-  width: 90%;
-  max-width: 800px;
-  height: auto; /* 高度自適應圖片 */
-  margin: 20px auto;
-  overflow: hidden;
+  width: 400px;     /* 輪播寬度 */
+  height: 250px;    /* 輪播高度 */
+  overflow: hidden; /* 超出範圍隱藏 */
+  margin: auto;
 }
 
 .slides {
@@ -417,14 +416,14 @@
 }
 
 .hospital-pic {
-  flex: 0 0 100%; /* flex: 0 0 100%; 是 flex-grow、flex-shrink 和 flex-basis 三個屬性的縮寫,每張圖片占整個寬度 */
   height: 100%;
 }
 
 .hospital-pic img {
-  width: 100%;
-  height: 100%;
-  object-fit: contain; /*用於在不變形的情況下，將媒體內容（如圖片、影片）縮放到完整顯示於容器內*/
+   width: 400px;
+  height: 250px;
+  object-fit: cover;
+  border-radius: 12px;
 }
 
 .prev, .next {
@@ -441,38 +440,14 @@
   z-index: 10;
   display: block;
 }
-
-.prev { left: 10px; }
-.next { right: 10px; }
-
-.dots {
-  position: absolute;
-  bottom: 10px;
-  width: 100%;
-  text-align: center;
-}
-
-.dot { /*加入js*/
-  display: inline-block;
-  width: 12px;
-  height: 12px;
-  margin: 0 5px;
-  background-color: rgba(255,255,255,0.5);
-  border-radius: 50%;
-  cursor: pointer;
-}
-
-.dot.active {/*加入js*/
-  background-color: white;
-}
-
-@media screen and (max-width: 480px) {
-  .prev, .next {
+ .prev, .next {
     font-size: 18px;
     padding: 6px 10px;
     display: none;
   }
-}
+
+.prev { left: 10px; }
+.next { right: 10px; }
 
 
 @media screen and (min-width:768px) {
@@ -490,4 +465,30 @@
   .hospital-pic-wrap {
     padding-bottom: 50px;
   }
+  .slider {
+  width: 500px;     /* 輪播寬度 */
+  height: 350px;    /* 輪播高度 */
+}
+  .hospital-pic img {
+   width: 500px;
+  height: 350px;
+  object-fit: cover;
+  border-radius: 12px;
+}
+ 
+}
+@media screen and (min-width:1024px){
+ .slider {
+  width: 600px;     /* 輪播寬度 */
+  height: 450px;    /* 輪播高度 */
+}
+.hospital-pic img {
+   width: 600px;
+  height: 450px;
+  object-fit: cover;
+  border-radius: 12px;
+}
+.prev, .next {
+  display: block;
+}
 }
