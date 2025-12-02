@@ -115,6 +115,7 @@
 }
 .medical-card{
   box-sizing: border-box;
+  width: 300px;
 }
 .medical-title h2 {
   text-align: center;
@@ -241,14 +242,9 @@
       /* 右上腳印大小 */
       50%;
     /* 左下腳印大小 */
+   
 }
 
-
-.medical-card {
-    width: 400px;
-    display: flex;
-    flex-direction: column;
-  }
  
 }
 @media screen and (min-width:1024px) {
@@ -311,4 +307,26 @@
     text-decoration: underline;
   }
 
+}
+/* 手機版（橫向滑動卡片） */
+@media screen and (max-width: 1024px) {
+
+  .wrap-flex {
+    display: flex;
+    flex-direction: row;        /*  改成橫向排列 */
+    gap: 20px;
+    overflow-x: auto;           /* 啟用左右滑動 */
+    padding: 20px 10px;
+    scroll-snap-type: x mandatory;   /* ✔ 滑動自動吸附 */
+  }
+
+  .medical-card {
+    min-width: 80%;            /* 卡片寬度，讓它像 APP 輪播 */
+    flex-shrink: 0;            /* 避免卡片被壓縮 */
+    scroll-snap-align: center; /* ✔ 卡片自動停在中間 */
+  }
+
+  .wrap-flex::-webkit-scrollbar { /*整個捲軸區塊*/
+    display: none;             /* 隱藏捲軸（更乾淨） */
+  }
 }

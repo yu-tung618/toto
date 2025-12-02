@@ -4,8 +4,6 @@ window.onload=function(){
 
         function triggerAnimationOnScroll(){
             const windowHeight =window.innerHeight;
-            
-
             animatedElements.forEach(element =>{
                 const elementTopPosition=element.getBoundingClientRect().top
                 //getBoundingClientRect() 是 DOM 方法，用來取得元素 相對於視窗的大小和位置,,forEach() = 陣列（array）的成員迴圈方法，用來「逐一處理每一個元素」
