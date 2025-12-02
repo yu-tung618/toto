@@ -398,6 +398,9 @@
     margin-bottom: 20px;
     margin-top: 20px;
   }
+  .serve-pic:hover .card-inner{
+    box-shadow: 0 0  10px rgb(236, 206, 206);
+  }
 
   .serve-pic:hover img{
     width: 160px;
