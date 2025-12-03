@@ -26,27 +26,27 @@
 
         @media screen and (min-width:768px) {
             body {
-                background-image: url(picture/back/right.png), url(picture/back/lift.png), url(picture/images/x1.png), url(picture/images/x2.png);
+                background-image: url(picture/back/right.png), url(picture/back/lift.png), url(picture/images/resever1.png), url(picture/images/resever2.png);
                 background-repeat: no-repeat;
-                background-position: left 20px top 200px, right 20px bottom 200px, left 40px top 500px, right 60px bottom 600px;
+                background-position: left 20px top 400px, right 20px bottom 400px, left 40px top 900px, right 60px bottom 1000px;
                 background-size: 30%, 30%, 15%, 15%;
             }
         }
 
         @media screen and (min-width:1024px) {
             body {
-                background-image: url(picture/back/right.png), url(picture/back/lift.png), url(picture/images/x1.png), url(picture/images/x2.png);
+                background-image: url(picture/back/right.png), url(picture/back/lift.png), url(picture/images/resever1.png), url(picture/images/resever2.png);
                 background-repeat: no-repeat;
-                background-position: left 20px top 230px, right 20px bottom 200px, left 80px top 630px, right 100px bottom 600px;
+                background-position: left 20px top 630px, right 20px bottom 500px, left 80px top 1200px, right 100px bottom 1000px;
                 background-size: 30%, 30%, 17%, 17%;
             }
         }
 
         @media screen and (min-width:1440px) {
             body {
-                background-image: url(picture/images/x1.png), url(picture/images/x2.png), url(picture/back/right.png), url(picture/back/lift.png);
+                background-image: url(picture/images/resever2.png), url(picture/images/resever1.png), url(picture/back/right.png), url(picture/back/lift.png);
                 background-repeat: no-repeat;
-                background-position: left 100px top 690px, right 100px bottom 660px, left 20px top 230px, right 20px bottom 200px;
+                background-position: left 100px top 890px, right 100px bottom 960px, left 20px top 230px, right 20px bottom 200px;
                 background-size: 17%, 17%, 30%, 30%;
             }
         }
@@ -69,11 +69,11 @@
                         close
                     </span>
                 </label>
-                <a href="index.html">首頁</a>
                 <a href="about.html">關於我們</a>
                 <a href="contact.html">預約須知</a>
                 <a href="medical.html">醫療服務</a>
                 <a href="feedback.html">飼主回饋</a>
+                <a href="resever.html">健檢預約</a>
             </nav>
         </div>
     </header>
@@ -298,67 +298,83 @@
 
 
     <!-- 預約表格 -->
-    <div class="resever-containet">
-        <div class="text">
-            TOTO動物醫院健康檢查預約 (僅限健檢)
-            線上預約不開放當日約診，若有當日看診需求，歡迎於營業時間內來電。若不方便填寫預約單，請直接打電話預約。
-            醫院電話：03-956 1195
-            填寫表單後，將有專人與您電話連繫，確認時間後才算完成預約。若是超過兩天沒有接到電話通知，煩請與我們聯繫，感謝您！
-        </div>
-        <form class="resever">
-            <div class="ower noto-sans-tc-uniquifier">
-                <label for="">飼主名字</label>
-                <input type="text" placeholder="請輸入全名">
-                <label for="">連絡電話</label>
-                <input type="text">
-                <label for="">Email</label>
-                <input type="text">
-                <label for="">緊急連絡電話</label>
-                <input type="text">
+    <div class="overlay" id="overlay"></div>
+    <div class="resever-container reseverno">
+        <div class="resever-wrap">
+            <div class="text noto-sans-tc-uniquifier">
+                <p> TOTO動物醫院健康檢查預約 (僅限健檢)
+                    線上預約不開放當日約診，若有當日看診需求，歡迎於營業時間內來電。若不方便填寫預約單，請直接打電話預約。
+                    醫院電話：03-956 1195
+                    填寫表單後，將有專人與您電話連繫，確認時間後才算完成預約。若是超過兩天沒有接到電話通知，煩請與我們聯繫，感謝您！
+                </p>
             </div>
+            <form class="resever">
+                <div class="ower noto-sans-tc-uniquifier">
+                    <label for="">飼主名字</label>
+                    <input type="text" placeholder="請輸入全名" class="name">
+                    <label for="">連絡電話</label>
+                    <input type="text" class="phone">
+                    <label for="">Email</label>
+                    <input type="text" class="em">
+                    <label for="">緊急連絡電話</label>
+                    <input type="text" class="phone2">
+                </div>
 
-            <div class="animal noto-sans-tc-uniquifier">
-                <label for="">寵物名字</label>
-                <input type="text">
-                <label>寵物種類</label>
-                <select>
-                    <option value="犬">犬</option>
-                    <option value="貓">貓</option>
-                </select>
-                <label for="">寵物品種</label>
-                <input type="text">
-                <label for="">寵物年齡</label>
-                <input type="text">
-                <label>寵物性別</label>
-                <select>
-                    <option value="公">公</option>
-                    <option value="母">母</option>
-                </select>
-                <label>是否已絕育</label>
-                <select>
-                    <option value="是">是</option>
-                    <option value="否">否</option>
-                </select>
-            </div>
+                <div class="animal noto-sans-tc-uniquifier">
+                    <label for="">寵物名字</label>
+                    <input type="text" class="ptname">
+                    <label>寵物種類</label>
+                    <select class="pt">
+                        <option value="犬">犬</option>
+                        <option value="貓">貓</option>
+                    </select>
+                    <label>寵物品種</label>
+                    <input type="text" class="pbreed">
+                    <label for="">寵物年齡</label>
+                    <input type="text" class="ptage">
+                    <label>寵物性別</label>
+                    <select class="ptgender">
+                        <option value="公">公</option>
+                        <option value="母">母</option>
+                    </select>
+                    <label>是否已絕育</label>
+                    <select class="ptfix">
+                        <option value="是">是</option>
+                        <option value="否">否</option>
+                    </select>
+                </div>
 
-            <div class="other">
-                <label for="">是否有重大疾病</label>
-                <input type="text">
-                <label for="">是否有服用慢性藥物</label>
-                <input type="text">
-                <label for="">預約日期</label>
-                <input type="date">
-                <label>預約時段</label>
-                <select>
-                    <option value="早上">9:00-11:00</option>
-                    <option value="下午">14:00-16:00</option>
-                </select>
-                <div class="text">
+                <div class="other noto-sans-tc-uniquifie">
+                    <label>是否有重大疾病</label>
+                    <textarea class="disease-input" rows="4" cols="50" placeholder="請在此輸入詳細資訊..."></textarea>
+                    <label for="">是否有服用慢性藥物</label>
+                    <textarea class="disease-input" rows="4" cols="50" placeholder="請在此輸入詳細資訊..."></textarea>
+                </div>
+                <div class="times">
+                    <label>預約日期</label>
+                    <input type="date" class="date">
+                    <label>預約時段</label>
+                    <select class="time noto-sans-tc-uniquifie">
+                        <option value="早上">9:00-11:00</option>
+                        <option value="下午">14:00-16:00</option>
+                        <option value="晚上">18:00-19:00</option>
+                    </select>
+                </div> 
+          
+                <div class="text noto-sans-tc-uniquifie">
                     <p>提醒您來院時可以攜帶毛孩的糞便來院，健康檢查套組皆包含糞便檢查。(24小時內的新鮮糞便，用乾淨的塑膠袋裝取即可 無須冷藏)
                         來院前建議空腹 6-8 小時 (可以飲水)</p>
+                </div> 
+             </form>
+                <div class="check">
+                    <input type="checkbox">
+                    <p class="noto-sans-tc-uniquifie">我已經詳閱上述提醒事項，並瞭解需待TOTO動物醫院與我聯繫，以確認健檢時間</p>
                 </div>
+           
+            <div class="btn resever-btn">
+                <button>送出表單</button>
             </div>
-        </form>
+        </div>
     </div>
 
     <footer>
