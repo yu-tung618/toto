@@ -1,0 +1,400 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="reset.css">
+    <link rel="stylesheet" href="resever.css">
+    <link rel="stylesheet" href="hf.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Chiron+GoRound+TC:wght@200..900&family=Noto+Sans+TC:wght@100..900&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200&icon_names=close" />
+
+    <style>
+        body {
+            background-image: url(picture/back/right.png), url(picture/back/lift.png), url(picture/back/right.png), url(picture/back/lift.png);
+            background-repeat: no-repeat;
+            background-position: left 20px top 200px, right 20px bottom 300px, right 60px top 500px, left 10px top 700px;
+            background-size: 30%, 30%;
+        }
+
+        @media screen and (min-width:768px) {
+            body {
+                background-image: url(picture/back/right.png), url(picture/back/lift.png), url(picture/images/x1.png), url(picture/images/x2.png);
+                background-repeat: no-repeat;
+                background-position: left 20px top 200px, right 20px bottom 200px, left 40px top 500px, right 60px bottom 600px;
+                background-size: 30%, 30%, 15%, 15%;
+            }
+        }
+
+        @media screen and (min-width:1024px) {
+            body {
+                background-image: url(picture/back/right.png), url(picture/back/lift.png), url(picture/images/x1.png), url(picture/images/x2.png);
+                background-repeat: no-repeat;
+                background-position: left 20px top 230px, right 20px bottom 200px, left 80px top 630px, right 100px bottom 600px;
+                background-size: 30%, 30%, 17%, 17%;
+            }
+        }
+
+        @media screen and (min-width:1440px) {
+            body {
+                background-image: url(picture/images/x1.png), url(picture/images/x2.png), url(picture/back/right.png), url(picture/back/lift.png);
+                background-repeat: no-repeat;
+                background-position: left 100px top 690px, right 100px bottom 660px, left 20px top 230px, right 20px bottom 200px;
+                background-size: 17%, 17%, 30%, 30%;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <input type="checkbox" name="" id="menu-control">
+        <div class="header">
+            <h1 class="logo">
+                <a href="index.html"><img src="picture/LOGO/logo ok.png" alt="logo"></a>
+            </h1>
+            <label for="menu-control" class="menu-btn">
+                <span>選單</span>
+            </label>
+            <nav class="noto-sans-tc-uniquifier">
+                <label for="menu-control" class="menu-btn1">
+                    <span class="material-symbols-outlined">
+                        close
+                    </span>
+                </label>
+                <a href="index.html">首頁</a>
+                <a href="about.html">關於我們</a>
+                <a href="contact.html">預約須知</a>
+                <a href="medical.html">醫療服務</a>
+                <a href="feedback.html">飼主回饋</a>
+            </nav>
+        </div>
+    </header>
+
+    <div class="banner">
+        <div class="banner-text noto-sans-tc-uniquifier">
+            <h2>健檢預約
+                <small>
+                    為健康把關的第一步
+                </small>
+            </h2>
+        </div>
+    </div>
+
+    <section>
+        <div class="container">
+            <div class="wrap">
+                <div class="title noto-sans-tc-uniquifier">
+                    <h2>動物健康檢查｜為毛孩打造更長久、更安心的陪伴</h2>
+                    <p>多數毛孩天性堅強，即使身體不舒服也會忍耐、隱藏症狀。 許多疾病在初期沒有明顯表現，當飼主察覺異樣時，往往已進入中後期，治療時間與費用也會大幅增加。
+                        因此，「定期健康檢查」不是奢侈，而是陪伴毛孩一生最重要的投資。
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section>
+        <div class="container">
+            <div class="wrap">
+                <div class="card">
+                    <div class="title noto-sans-tc-uniquifier">
+                        <h3>一. 動物無法表達不適，疾病容易被忽略
+                        </h3>
+                    </div>
+                    <div class="text noto-sans-tc-uniquifier">
+                        <p>像腎臟病、心臟病、肝指數異常、內分泌失衡等問題，通常在早期毫無症狀，但其實已悄悄發生。健檢能比症狀更早一步發現。</p>
+                    </div>
+                </div>
+
+                <div class="card">
+                    <div class="title noto-sans-tc-uniquifier">
+                        <h3> 二、許多疾病的黃金治療期很短</h3>
+                    </div>
+                    <div class="text noto-sans-tc-uniquifier">
+                        <p>早期找到、早期治療，能有效延緩疾病進程、降低併發症，甚至完全治癒。</p>
+                    </div>
+                </div>
+
+                <div class="card">
+                    <div class="title noto-sans-tc-uniquifier">
+                        <h3> 三、隨年齡增加，風險也跟著上升</h3>
+                    </div>
+                    <div class="text noto-sans-tc-uniquifier">
+                        <ul>
+                            <li>幼年（1 歲以下）：評估發育、寄生蟲、先天問題</li>
+                            <li>成年（1–7 歲）：維持器官功能、預防慢性病
+                            </li>
+                            <li>高齡（7 歲以上）：高風險族群，建議更詳細健檢</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+
+    <section>
+        <div class="container">
+            <div class="wrap">
+                <div class="title">
+                    <h2>動物健檢包含哪些項目？</h2>
+                </div>
+                <div class="card">
+                    <div class="title noto-sans-tc-uniquifier">
+                        <h3> 一、基礎健康檢查</h3>
+                    </div>
+                    <div class="text noto-sans-tc-uniquifier">
+                        <ul>
+                            <li>體重、心跳、呼吸、體溫</li>
+                            <li>皮膚、關節、淋巴結檢查
+                            </li>
+                            <li>口腔及牙齦狀況評估</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="card">
+                    <div class="title noto-sans-tc-uniquifier">
+                        <h3> 二、 血液檢查（CBC + 生化）</h3>
+                    </div>
+                    <div class="text noto-sans-tc-uniquifier">
+                        <p>了解器官功能是否正常，如：</p>
+                        <ul>
+                            <li>腎臟（BUN、CREA）</li>
+                            <li>肝臟（ALT、AST、ALP）
+                            </li>
+                            <li>血糖、膽固醇</li>
+                            <li>電解質平衡</li>
+                            <li>紅白血球/血小板是否異常</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="card">
+                    <div class="title noto-sans-tc-uniquifier">
+                        <h3> 三、 影像檢查</h3>
+                    </div>
+                    <div class="text noto-sans-tc-uniquifier">
+                        <p>了解器官功能是否正常，如：</p>
+                        <ul>
+                            <li>X 光：骨骼、關節、胸腔、腫瘤偵測</li>
+                            <li>腹部超音波：肝、腎、脾、膀胱、腸胃的型態與結構
+                            </li>
+                            <li>心臟超音波／心電圖（高齡建議）：評估心臟大小、瓣膜、收縮功能</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="card">
+                    <div class="title noto-sans-tc-uniquifier">
+                        <h3> 四、尿液與糞便檢查</h3>
+                    </div>
+                    <div class="text noto-sans-tc-uniquifier">
+                        <ul>
+                            <li>泌尿道疾病、尿路結石</li>
+                            <li>寄生蟲、腸胃道吸收問題
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="card">
+                    <div class="title noto-sans-tc-uniquifier">
+                        <h3> 五、 口腔檢查</h3>
+                    </div>
+                    <div class="text noto-sans-tc-uniquifier">
+                        <p>狗貓常見牙周病，會影響心臟與腎臟健康。透過口腔評估可決定是否需要洗牙或後續治療。</p>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <section>
+        <div class="container">
+            <div class="wrap">
+                <div class="title">
+                    <h2>不同年齡毛孩的健檢建議頻率</h2>
+                </div>
+                <div class="card">
+                    <div class="title noto-sans-tc-uniquifier">
+                        <h3> 幼年（1 歲以下）</h3>
+                    </div>
+                    <div class="text noto-sans-tc-uniquifier">
+                        <ul>
+                            <li>生長監測</li>
+                            <li>疫苗前評估
+                            </li>
+                            <li>驅蟲與飲食建議</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="card">
+                    <div class="title noto-sans-tc-uniquifier">
+                        <h3> 成年（1–7 歲）</h3>
+                    </div>
+                    <div class="text noto-sans-tc-uniquifier">
+                        <ul>
+                            <li>每年一次健檢</li>
+                            <li>基本血檢 + X 光 + 超音波視需求追加
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="card">
+                    <div class="title noto-sans-tc-uniquifier">
+                        <h3>高齡（7 歲以上）</h3>
+                    </div>
+                    <div class="text noto-sans-tc-uniquifier">
+                        <ul>
+                            <li>建議每 6 個月健檢一次</li>
+                            <li>心臟超音波、甲狀腺、腎臟指數等更重要
+                            </li>
+
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="card">
+                    <div class="title noto-sans-tc-uniquifier">
+                        <h3> 四、尿液與糞便檢查</h3>
+                    </div>
+                    <div class="text noto-sans-tc-uniquifier">
+                        <ul>
+                            <li>泌尿道疾病、尿路結石</li>
+                            <li>寄生蟲、腸胃道吸收問題
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="card">
+                    <div class="title noto-sans-tc-uniquifier">
+                        <h3> 五、 口腔檢查</h3>
+                    </div>
+                    <div class="text noto-sans-tc-uniquifier">
+                        <p>狗貓常見牙周病，會影響心臟與腎臟健康。透過口腔評估可決定是否需要洗牙或後續治療。</p>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+        <div class="btn no">
+            <button>立即預約</button>
+        </div>
+    </section>
+
+
+    <!-- 預約表格 -->
+    <div class="resever-containet">
+        <div class="text">
+            TOTO動物醫院健康檢查預約 (僅限健檢)
+            線上預約不開放當日約診，若有當日看診需求，歡迎於營業時間內來電。若不方便填寫預約單，請直接打電話預約。
+            醫院電話：03-956 1195
+            填寫表單後，將有專人與您電話連繫，確認時間後才算完成預約。若是超過兩天沒有接到電話通知，煩請與我們聯繫，感謝您！
+        </div>
+        <form class="resever">
+            <div class="ower noto-sans-tc-uniquifier">
+                <label for="">飼主名字</label>
+                <input type="text" placeholder="請輸入全名">
+                <label for="">連絡電話</label>
+                <input type="text">
+                <label for="">Email</label>
+                <input type="text">
+                <label for="">緊急連絡電話</label>
+                <input type="text">
+            </div>
+
+            <div class="animal noto-sans-tc-uniquifier">
+                <label for="">寵物名字</label>
+                <input type="text">
+                <label>寵物種類</label>
+                <select>
+                    <option value="犬">犬</option>
+                    <option value="貓">貓</option>
+                </select>
+                <label for="">寵物品種</label>
+                <input type="text">
+                <label for="">寵物年齡</label>
+                <input type="text">
+                <label>寵物性別</label>
+                <select>
+                    <option value="公">公</option>
+                    <option value="母">母</option>
+                </select>
+                <label>是否已絕育</label>
+                <select>
+                    <option value="是">是</option>
+                    <option value="否">否</option>
+                </select>
+            </div>
+
+            <div class="other">
+                <label for="">是否有重大疾病</label>
+                <input type="text">
+                <label for="">是否有服用慢性藥物</label>
+                <input type="text">
+                <label for="">預約日期</label>
+                <input type="date">
+                <label>預約時段</label>
+                <select>
+                    <option value="早上">9:00-11:00</option>
+                    <option value="下午">14:00-16:00</option>
+                </select>
+                <div class="text">
+                    <p>提醒您來院時可以攜帶毛孩的糞便來院，健康檢查套組皆包含糞便檢查。(24小時內的新鮮糞便，用乾淨的塑膠袋裝取即可 無須冷藏)
+                        來院前建議空腹 6-8 小時 (可以飲水)</p>
+                </div>
+            </div>
+        </form>
+    </div>
+
+    <footer>
+        <div class="container-footer">
+            <div class="footer-logo">
+                <img src="picture/LOGO/logo ok.png" alt="logo">
+            </div>
+            <div class="footer-colum">
+                <div class="footer-text noto-sans-tc-uniquifier">
+                    <p>預約專線 : </p>
+                    <p>03-9561195</p>
+                </div>
+                <div class="footer-text noto-sans-tc-uniquifier">
+                    <p>地址 : </p>
+                    <p>宜蘭縣羅東鎮忠孝路133號</p>
+                </div>
+                <div class="footer-text noto-sans-tc-uniquifier">
+                    <p>停車場 : </p>
+                    <p>羅東公正國小地下停車場</p>
+                </div>
+                <div class="footer-text noto-sans-tc-uniquifier">
+                    <p>email : </p>
+                    <p>toothtooth@gmail.com</p>
+                </div>
+            </div>
+            <div class="footer-icon">
+                <a href="#"><img src="picture/icon/line.png" alt="line"></a>
+                <a href="#"><img src="picture/icon/fb.png" alt="fb"></a>
+                <a href="#"><img src="picture/icon/ig.png" alt="ig"></a>
+            </div>
+        </div>
+    </footer>
+    <!-- 背景灰色遮罩 -->
+    <div class="overlay" id="overlay"></div>
+    <script src="hf.js"></script>
+    <script src="about.js"></script>
+</body>
+
+</html>

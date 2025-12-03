@@ -123,10 +123,7 @@
 
 }
 
-.about-more:hover,
-.serve-more:hover {
-  background-color: #F4906B;
-}
+
 
 /*動畫區*/
 .scroll-about{
@@ -220,6 +217,10 @@
     margin-bottom: 20px;
     align-self: flex-end;
   }
+  .about-more:hover,
+.serve-more:hover {
+  background-color: #F4906B;
+}
 }
 
 @media screen and (min-width:1440px) {
@@ -227,6 +228,7 @@
     width: 617px;
     height: 411px;
   }
+  
 
 }
 

@@ -1,0 +1,249 @@
+.noto-sans-tc-uniquifier {
+    font-family: "Noto Sans TC", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: weight;
+    font-style: normal;
+}
+
+.banner {
+    /* max-width: 1920px; */
+    margin-top: 35px;
+    background-image:
+        url(picture/back/adorable-kitty-with-monochrome-wall-her-removebg-preview.png),
+        linear-gradient(to left, rgba(244, 144, 107, 0.5), rgba(255, 255, 255, 0.2));
+    background-repeat:
+        no-repeat,
+        no-repeat;
+
+    background-position:
+        bottom right 10px,
+        center;
+
+    /* 👇這裡設定每一層的大小 */
+    background-size:
+        26%,
+        100%;
+}
+
+.banner-text {
+    padding: 40px;
+    font-size: 20px;
+    font-weight: bold;
+    letter-spacing: 1.2px;
+    position: relative;
+}
+
+.banner-text small {
+    display: none;
+    color: #242424;
+    font-weight: 500;
+}
+
+@media screen and (min-width:768px) {
+    .banner {
+        background-position:
+            bottom right,
+            center,
+            bottom center;
+        background-size:
+            23%,
+            /* 第一層圖片縮小到容器寬度的 40% */
+            100%,
+            /* 第二層漸層覆蓋整個背景 */
+            cover;
+        /* 第三層鋪滿底圖 */
+    }
+
+    .banner-text {
+        padding: 80px;
+        margin-left: 10px;
+        margin-top: 50px;
+        letter-spacing: 3px;
+        font-size: 20px;
+    }
+
+    .banner-text small {
+        display: block;
+        color: #242424;
+        font-size: 16px;
+        position: absolute;
+        bottom: 50px;
+        left: 80px;
+        font-weight: 500;
+    }
+}
+
+@media screen and (min-width:1024px) {
+    .banner {
+        /* margin-top: 150px; */
+        background-size:
+            16%,
+            100%,
+            /* 第二層漸層覆蓋整個背景 */
+            cover;
+        /* 第三層鋪滿底圖 */
+        background-position:
+            bottom right,
+            center,
+            bottom center;
+    }
+
+    .banner-text {
+        font-size: 30px;
+        margin-left: 100px;
+    }
+
+    .banner-text small {
+        font-size: 20px;
+        position: absolute;
+        bottom: 40px;
+    }
+}
+
+.container {
+    margin: 0 20px;
+    margin-bottom: -30px;
+}
+
+.title h2 {
+    text-align: center;
+    margin-top: 40px;
+    margin-bottom: 25px;
+    font-size: 20px;
+    font-weight: 700;
+    letter-spacing: 1.2px;
+}
+
+.title p {
+    font-weight: 400;
+    margin-bottom: 60PX;
+    line-height: 28px;
+    letter-spacing: 0.96px;
+}
+
+.wrap {
+    display: flex;
+    flex-direction: column;
+}
+
+.text {
+    padding: 30px 30px;
+     font-weight: 400;
+    line-height: 28px;
+}
+
+.title h3 {
+    font-size: 20px;
+    font-weight: 700;
+    line-height: 28px;
+    letter-spacing: 0.96px;
+    margin-bottom: -20px;
+}
+
+.text ul li {
+    font-weight: 400;
+    line-height: 28px;
+    display: list-item;
+    list-style-type: disc;
+}
+
+.btn{
+    margin-top: 20px;
+    display: flex;
+    justify-content: center;
+}
+.btn button{
+    font-size: 20px;
+    padding: 5px 10px;
+    background-color:#F4906B ;
+    border: none;
+    border-radius: 10px;
+}
+
+.no{
+    opacity: 0;
+}
+
+@media screen and (min-width:768px) {
+
+    .container {
+        margin: 0 60px;
+        margin-bottom: -30px;
+
+    }
+
+    .wrap {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .card {
+        width: 400px;
+    }
+}
+
+@media screen and (min-width:1024px) {
+
+    .container {
+        margin-bottom: -30px;
+        margin: 0 150px;
+    }
+
+    .title h2 {
+        margin-top: 60px;
+        margin-bottom: 25px;
+        font-size: 25px;
+        font-weight: 700;
+        letter-spacing: 3.6px;
+    }
+
+    .title p {
+        font-size: 20px;
+        letter-spacing: 1.2px;
+        padding: 0 50px;
+    }
+
+    .wrap {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .text {
+        padding: 40px 10px;
+        font-size: 20px;
+        font-weight: 400;
+        line-height: 30px;
+        letter-spacing: 1.2px;
+    }
+
+    .title h3 {
+        font-size: 25px;
+        font-weight: 700;
+        margin-bottom: -20px;
+        line-height: 30px;
+        /* 120% */
+        letter-spacing: 3px;
+    }
+
+    .text ul li {
+        font-size: 20px;
+        font-weight: 400;
+        line-height: 30px;
+        letter-spacing: 1.2px;
+        display: list-item;
+        list-style-type: disc;
+    }
+
+
+.btn button{
+    font-size: 25px;
+    padding: 15px 25px;
+     border: none;
+    border-radius: 10px;
+}
+.no{
+    opacity: 1;
+}
+}
