@@ -254,7 +254,7 @@
   font-weight: bold;
   letter-spacing: 1.2px;
   text-align: center;
-  margin-top: 10px;
+  margin-top: 40px;
 }
 
 .team-wrap {
@@ -393,56 +393,29 @@
   font-weight: bold;
   padding: 30px 0 20px;
   letter-spacing: 1.2px;
+  margin-bottom: 30px;
 }
 
 .slider {
-  position: relative;
-  width: 400px;     /* 輪播寬度 */
-  height: 250px;    /* 輪播高度 */
-  overflow: hidden; /* 超出範圍隱藏 */
-  margin: auto;
+  margin: 0 auto;
+  width: 80%;
 }
 
 .slides {
-  display: flex;
-  width: 100%;
-  height: 100%;
-  transition: transform 0.5s ease-in-out;
-}
+  /* display: flex; */
+  margin:  0 auto;
 
-.hospital-pic {
-  height: 100%;
 }
+.slick-slide{
+            /* border: 1px solid blue; */
+            padding: 0 3px;
+        }
+
 
 .hospital-pic img {
-   width: 400px;
-  height: 250px;
-  object-fit: cover;
-  border-radius: 12px;
+  width: 100%;
+  border-radius: 10px;
 }
-
-.prev, .next {
-  position: absolute;
-  top: 50%;
-  transform: translateY(-50%);
-  background-color: rgba(112, 112, 112, 0.212);
-  color: rgba(255, 255, 255, 0.767);
-  border: none;
-  font-size: 24px;
-  padding: 8px 12px;
-  cursor: pointer;
-  border-radius: 50%;
-  z-index: 10;
-  display: block;
-}
- .prev, .next {
-    font-size: 18px;
-    padding: 6px 10px;
-    display: none;
-  }
-
-.prev { left: 10px; }
-.next { right: 10px; }
 
 
 @media screen and (min-width:768px) {
@@ -460,30 +433,11 @@
   .hospital-pic-wrap {
     padding-bottom: 50px;
   }
-  .slider {
-  width: 500px;     /* 輪播寬度 */
-  height: 350px;    /* 輪播高度 */
-}
-  .hospital-pic img {
-   width: 500px;
-  height: 350px;
-  object-fit: cover;
-  border-radius: 12px;
-}
  
 }
 @media screen and (min-width:1024px){
- .slider {
-  width: 600px;     /* 輪播寬度 */
-  height: 450px;    /* 輪播高度 */
+.slider {
+  /* width: 50%; */
 }
-.hospital-pic img {
-   width: 600px;
-  height: 450px;
-  object-fit: cover;
-  border-radius: 12px;
-}
-.prev, .next {
-  display: block;
-}
+
 }
