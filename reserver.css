@@ -16,12 +16,12 @@
         no-repeat;
 
     background-position:
-        bottom right 10px,
+        bottom right ,
         center;
 
     /* 👇這裡設定每一層的大小 */
     background-size:
-        26%,
+        130px,
         100%;
 }
 
@@ -43,15 +43,12 @@
     .banner {
         background-position:
             bottom right,
-            center,
-            bottom center;
+            center;
         background-size:
-            23%,
+            200px,
             /* 第一層圖片縮小到容器寬度的 40% */
-            100%,
+            100%;
             /* 第二層漸層覆蓋整個背景 */
-            cover;
-        /* 第三層鋪滿底圖 */
     }
 
     .banner-text {
@@ -77,15 +74,12 @@
     .banner {
         /* margin-top: 150px; */
         background-size:
-            16%,
-            100%,
+            230px,
+            100%;
             /* 第二層漸層覆蓋整個背景 */
-            cover;
-        /* 第三層鋪滿底圖 */
         background-position:
             bottom right,
-            center,
-            bottom center;
+            center;
     }
 
     .banner-text {
