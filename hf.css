@@ -75,6 +75,7 @@ nav a {
   padding: 15px 20px;
   /* border-bottom: 1px solid #aaaaaa; */
   position: relative;
+  text-decoration: none;
 }
 
 nav a+a::before{
@@ -89,6 +90,12 @@ nav a+a::before{
 
 nav a:hover {
   color: #878787;
+}
+
+nav a.change{
+  color: rgb(156, 0, 0);
+  font-weight: 700;
+
 }
 
  /* 淡灰色背景 */

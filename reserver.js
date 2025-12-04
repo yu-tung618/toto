@@ -51,7 +51,8 @@ window.onload = function () {
             return false;
         }
         
-        const breedPattern = /^[A-Za-z\u4e00-\u9fa5]+$/;
+        // const breedPattern = /^[A-Za-z\u4e00-\u9fa5]+$/; 
+         const breedPattern =/^[\p{Script=Han}]+$/u;
         if(pbreed.value.trim() ==="" || !breedPattern.test(pbreed.value)){
             alert("請輸入寵物品種");
         return false;
@@ -88,6 +89,18 @@ window.onload = function () {
           // ✅ 驗證全部通過後才執行
     box.classList.add("reserverno");
     alert("表單已送出")
+    // 清空所有欄位
+    name.value = "";
+    phone.value = "";
+    em.value = "";
+    phone2.value = "";
+    animal.value = "";
+    pbreed.value = "";
+    ptage.value = "";
+    input.value = "";
+    input2.value = "";
+    date.value = "";
+    checkbox.checked = false;
     return true;
     });
     
