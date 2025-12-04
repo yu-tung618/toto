@@ -298,8 +298,8 @@
 
 
     <!-- 預約表格 -->
-    <div class="resever-container reseverno">
-        <div class="resever-wrap">
+    <div class="reserver-container reserverno">
+        <div class="reserver-wrap">
             <div class="text noto-sans-tc-uniquifier">
                 <p> TOTO動物醫院健康檢查預約 (僅限健檢)
                     線上預約不開放當日約診，若有當日看診需求，歡迎於營業時間內來電。若不方便填寫預約單，請直接打電話預約。
@@ -307,7 +307,7 @@
                     填寫表單後，將有專人與您電話連繫，確認時間後才算完成預約。若是超過兩天沒有接到電話通知，煩請與我們聯繫，感謝您！
                 </p>
             </div>
-            <form class="resever">
+            <form class="reserver">
                 <div class="ower noto-sans-tc-uniquifier">
                     <label for="">飼主名字</label>
                     <input type="text" placeholder="請輸入全名" class="name">
@@ -320,7 +320,7 @@
                 </div>
 
                 <div class="animal noto-sans-tc-uniquifier">
-                    <label for="">寵物名字</label>
+                    <label for="" >寵物名字</label>
                     <input type="text" class="ptname">
                     <label>寵物種類</label>
                     <select class="pt">
@@ -347,7 +347,7 @@
                     <label>是否有重大疾病</label>
                     <textarea class="disease-input" rows="4" cols="50" placeholder="請在此輸入詳細資訊..."></textarea>
                     <label for="">是否有服用慢性藥物</label>
-                    <textarea class="disease-input" rows="4" cols="50" placeholder="請在此輸入詳細資訊..."></textarea>
+                    <textarea class="disease-input2" rows="4" cols="50" placeholder="請在此輸入詳細資訊..."></textarea>
                 </div>
                 <div class="times">
                     <label>預約日期</label>
@@ -358,23 +358,26 @@
                         <option value="下午">14:00-16:00</option>
                         <option value="晚上">18:00-19:00</option>
                     </select>
-                </div> 
-          
+                </div>
+
                 <div class="text noto-sans-tc-uniquifie">
                     <p>提醒您來院時可以攜帶毛孩的糞便來院，健康檢查套組皆包含糞便檢查。(24小時內的新鮮糞便，用乾淨的塑膠袋裝取即可 無須冷藏)
                         來院前建議空腹 6-8 小時 (可以飲水)</p>
-                </div> 
-             </form>
-                <div class="check">
-                    <input type="checkbox">
-                    <p class="noto-sans-tc-uniquifie">我已經詳閱上述提醒事項，並瞭解需待TOTO動物醫院與我聯繫，以確認健檢時間</p>
                 </div>
-           
-            <div class="btn resever-btn">
+            </form>
+            <div class="check">
+                <input type="checkbox" class="checkbox">
+                <p class="noto-sans-tc-uniquifie">我已經詳閱上述提醒事項，並瞭解需待TOTO動物醫院與我聯繫，以確認健檢時間</p>
+            </div>
+
+            <div class="btn reserver-btn">
                 <button>送出表單</button>
             </div>
         </div>
+        <!-- 背景灰色遮罩 -->
+    <div class="over" id="over"></div>
     </div>
+    
 
     <footer>
         <div class="container-footer">
@@ -404,12 +407,13 @@
                 <a href="#"><img src="picture/icon/fb.png" alt="fb"></a>
                 <a href="#"><img src="picture/icon/ig.png" alt="ig"></a>
             </div>
+
         </div>
     </footer>
     <!-- 背景灰色遮罩 -->
     <div class="overlay" id="overlay"></div>
     <script src="hf.js"></script>
-    <script src="about.js"></script>
+    <script src="reserver.js"></script>
 </body>
 
 </html>

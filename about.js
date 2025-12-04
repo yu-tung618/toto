@@ -2,7 +2,7 @@ window.onload=function(){
   
   // about動畫
 
-if(window.innerWidth >= 350){
+if(window.innerWidth >= 250){
     const animatedElements= document.querySelectorAll(".about-left, .about-right");// 選取所有要動畫的元素
 
     function triggerAnimationOnScroll(){
@@ -24,7 +24,7 @@ if(window.innerWidth >= 350){
 
  // team動畫
 
-if(window.innerWidth >= 350){
+if(window.innerWidth >= 250){
     const animatedElements= document.querySelectorAll(".to-top");// 選取所有要動畫的元素
 
     function triggerAnimationOnScroll(){

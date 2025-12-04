@@ -155,7 +155,7 @@
 }
 .btn button{
     font-size: 20px;
-    padding: 5px 10px;
+    padding: 5px 20px;
     background-color:#F4906B ;
     border: none;
     border-radius: 10px;
@@ -242,26 +242,23 @@
 
 
 .btn button{
-    font-size: 25px;
-    padding: 15px 25px;
+    font-size: 20px;
+    padding: 15px 35px;
      border: none;
-    border-radius: 10px;
+    border-radius: 20px;
 }
 .no{
     opacity: 1;
 }
 }
 
-.resever-container{ 
+.reserver-container{ 
     margin-top: -30px;
     margin-bottom: -30px;
 }
-.resever-wrap{
-    background-color: #ffbba3c3;
+.reserver-wrap{
+     background-color: #FFF4E2;
     backdrop-filter: blur(10px); 
-    /* display: flex;
-    flex-direction: column;
-    justify-content: center; */
 
 }
 .text{
@@ -269,7 +266,7 @@
      letter-spacing: 1.2px;
 }
 
-.resever{
+.reserver{
     display: grid;
   grid-template-columns: 1fr;
   gap: 10px;
@@ -299,15 +296,15 @@ select{
   letter-spacing: 1.2px;
   padding: 0 30px;
 }
-.resever-btn{
+.reserver-btn{
    padding-bottom: 30px;
 }
 
 @media screen and (min-width:768px){  
- .reseverno{
-    opacity: 0;
- }
- .resever-container{
+.reserver-container.reserverno{
+    display: none;
+ } 
+ .reserver-container{
       width: 100%;
       height: 100%;            
       display: flex;
@@ -319,39 +316,48 @@ select{
       right: 0;
       z-index: 999;
       overflow: hidden;   
-      background-color: #82828277;     
   }
 
-  .resever-wrap{
+  .reserver-wrap{
       transform: translateY(30%);
       width: 80%;
       height:50%;
       overflow-y: auto;     
       padding: 20px;
-      background-color: #ffbba3c3;
+      box-shadow: 0 0 20px rgb(71, 71, 71);
       backdrop-filter: blur(10px);
-      border-radius: 8px;
-
+       z-index: 999;
 }
+.over{
+    position: fixed;
+    inset: 0;
+    background: rgba(0,0,0,0.4);  /* 透明灰 */
+    display: none;
+    z-index: 150;
+}
+.over.active {
+    display: block;
+  }
 }
 @media screen and (min-width:1024px){
-    .resever-container{
+    .reserver-container{
       top: 16%;                    
   }
-.resever{
-    display: grid;
+.reserver{
+  display: grid;
   grid-template-columns: 1fr 1fr 1fr;
-  justify-items: self-start;
+  justify-items: center;
    gap: 15px;
    margin-top: 10px;
 }
+
 .ower, .animal, .other,.times{
     width: 200px;
     display: flex;
     flex-direction: column; 
      font-size: 20px;  
 }
-.resever .text{
+.reserver .text{
      grid-column: span 2;
      display: flex;
      flex-wrap: wrap;
@@ -368,7 +374,7 @@ select{
 }
 }
 @media screen and (min-width:1440px) {
-    .resever-wrap{
+    .reserver-wrap{
       width: 60%;
       height:50%;
 
