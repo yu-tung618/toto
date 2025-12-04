@@ -24,18 +24,15 @@
 
   background-repeat:
     no-repeat,
-    no-repeat,
     no-repeat;
 
   background-position:
     bottom right 10px,
-    center,
-    bottom center;
+    center;
 
   /* 👇這裡設定每一層的大小 */
   background-size:
-    30%,
-    /* 第一層圖片縮小到容器寬度的 40% */
+    140px,
     100%;
 }
 
@@ -59,7 +56,7 @@
       bottom right,
       center;
     background-size:
-      25%,
+      200px,
       /* 第一層圖片縮小到容器寬度的 40% */
       100%;
   }
@@ -87,7 +84,7 @@
   .banner {
     /* margin-top: 150px; */
     background-size:
-      20%,
+      280px,
       100%;
     background-position:
       bottom right 80px,
