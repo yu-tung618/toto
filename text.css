@@ -16,7 +16,7 @@
         no-repeat;
 
     background-position:
-        bottom right ,
+        bottom right,
         center;
 
     /* 👇這裡設定每一層的大小 */
@@ -48,7 +48,7 @@
             200px,
             /* 第一層圖片縮小到容器寬度的 40% */
             100%;
-            /* 第二層漸層覆蓋整個背景 */
+        /* 第二層漸層覆蓋整個背景 */
     }
 
     .banner-text {
@@ -76,7 +76,7 @@
         background-size:
             230px,
             100%;
-            /* 第二層漸層覆蓋整個背景 */
+        /* 第二層漸層覆蓋整個背景 */
         background-position:
             bottom right,
             center;
@@ -123,7 +123,7 @@
 
 .text {
     padding: 30px 30px;
-     font-weight: 400;
+    font-weight: 400;
     line-height: 28px;
 }
 
@@ -142,20 +142,21 @@
     list-style-type: disc;
 }
 
-.btn{
+.btn {
     margin-top: 20px;
     display: flex;
     justify-content: center;
 }
-.btn button{
+
+.btn button {
     font-size: 20px;
     padding: 5px 20px;
-    background-color:#F4906B ;
+    background-color: #F4906B;
     border: none;
     border-radius: 10px;
 }
 
-.no{
+.no {
     opacity: 0;
 }
 
@@ -176,9 +177,10 @@
     .card {
         width: 400px;
     }
-    .no{
-    opacity: 1;
-}
+
+    .no {
+        opacity: 1;
+    }
 }
 
 @media screen and (min-width:1024px) {
@@ -235,16 +237,18 @@
     }
 
 
-.btn button{
-    font-size: 20px;
-    padding: 15px 35px;
-     border: none;
-    border-radius: 20px;
+    .btn button {
+        font-size: 20px;
+        padding: 15px 35px;
+        border: none;
+        border-radius: 20px;
+    }
+
+    .no {
+        opacity: 1;
+    }
 }
-.no{
-    opacity: 1;
-}
-}
+
 .reserver-container {
     margin-top: -30px;
     margin-bottom: -30px;
