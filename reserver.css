@@ -150,13 +150,20 @@
 .btn button{
     font-size: 20px;
     padding: 5px 20px;
-    background-color:#F4906B ;
+    background-color: #FFBCA3;
     border: none;
     border-radius: 10px;
 }
-
+.btn button:hover{
+  background-color: #F4906B;
+}
 .no{
     opacity: 0;
+}
+.check input[type="checkbox"]{
+    transform: scale(1.5);
+    margin-right: 5px;
+    margin-left: 10px;
 }
 
 @media screen and (min-width:768px) {
