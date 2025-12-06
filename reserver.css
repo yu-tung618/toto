@@ -273,12 +273,13 @@
     display: flex;
     flex-direction: column;
     align-items: center;
-    justify-self: center;
+    
 }
 
 .form-item {
     display: flex;
     flex-direction: column;
+    align-items: center;
     margin: 10px 0;
 }
 
@@ -311,6 +312,10 @@ select {
     margin-top: 5px;
     font-size: 1em;
 }
+select option{
+    text-align: center;
+}
+
 
 .check {
     display: flex;
