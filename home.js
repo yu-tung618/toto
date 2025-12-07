@@ -62,6 +62,7 @@ if(window.innerWidth >= 250){
     window.addEventListener('scroll', triggerAnimationOnScroll);
 }
 
+
 // 翻卡動畫
 (function () {
   const cards = Array.from(document.querySelectorAll('.serve-pic'));
@@ -84,7 +85,7 @@ if(window.innerWidth >= 250){
 
   cards.forEach(card => {
     // 每次進頁面先移除舊狀態，確保重新整理時能再跑一次
-    card.classList.remove('flip', 'no-anim');
+    card.classList.remove('flip');
     observer.observe(card);
   });
 })();

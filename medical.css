@@ -280,15 +280,15 @@
   .medical-text {
     line-height: 30px;
     letter-spacing: 3px;
-    transition: color .5s .1s;
     transition: transform .5s .1s;
     transform: translateY(0);
     font-size: 20px;
   }
+ 
 
-  .medical-text:hover {
-    /* color: rgb(65, 55, 55); */
+  .medical-text:hover{
     transform: translateY(-10px);
+    
   }
 
   .medical-pic{
