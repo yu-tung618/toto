@@ -1,5 +1,5 @@
 window.onload=function(){
-    if(window.innerHeight>=250){
+    if(window.innerWidth>=250){
         const animatedElements =document.querySelectorAll(".left,.right")
    
 
