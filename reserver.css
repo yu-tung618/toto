@@ -160,6 +160,10 @@
 .no{
     opacity: 0;
 }
+.btn a{
+    text-decoration: none;
+    color: black;
+}
 .check input[type="checkbox"]{
     transform: scale(1.5);
     margin-right: 5px;
