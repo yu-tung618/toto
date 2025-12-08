@@ -478,7 +478,7 @@
 
 /* 被打開時顯示內容 */
 .faq-item input:checked~.faq-content {
-  max-height: 200px;
+  max-height: 40px;
 }
 
 .faq-foot img{
