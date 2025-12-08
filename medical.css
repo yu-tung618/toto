@@ -102,6 +102,22 @@
     bottom: 40px;
   }
 }
+.bread{
+  margin-top: 20px;
+  width: 200px;
+  display: flex;
+  justify-content: space-evenly;
+}
+.bread a{
+  display: block;
+  text-decoration: none;
+  color: #f07346;
+}
+
+.bread :nth-child(3){
+  color: #7a7a7a;
+}
+
 .container-medical{
   padding: 0 20px;
 }
@@ -114,6 +130,7 @@
 .medical-card{
   box-sizing: border-box;
   width: 300px;
+  position: relative;
 }
 .medical-title h2 {
   text-align: center;
@@ -176,7 +193,7 @@
 }
 .medical-card a{
   text-decoration: none;
-  color: black;
+  color: #f07346;
 }
 
 .more-flex{
@@ -187,8 +204,29 @@
 .more-flex a{
   display: block;
   font-weight: 300;
-
 }
+/* .arrow{
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  background-color: #747474c1;
+  color: white;
+  text-align: center;
+  line-height: 30px;ute;
+  top:60%;
+  z-index: 100;
+  display: block;
+}
+.arrow1,
+.arrow3{
+  right: 2%;
+}
+.arrow2,
+.arrow4{
+  left: 2%;
+} */
+
+
 
 /* 淡灰色背景 */
   .overlay {
@@ -263,7 +301,10 @@
     font-weight: bold;
     letter-spacing: 4.8px;
   }
-
+.bread a:hover{
+  font-weight: 700;
+}
+  
   .wrap-flex{
     flex-direction: row;
     align-items: flex-start;
@@ -300,9 +341,11 @@
   }
 
   .more-flex a:hover{
-    color: #f07346;
     font-weight: 500;
     text-decoration: underline;
+  }
+  .arrow{
+    display: none;
   }
 
 }
