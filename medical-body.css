@@ -48,7 +48,7 @@
             180px,
             /* 第一層圖片縮小到容器寬度的 40% */
             100%;
-            /* 第二層漸層覆蓋整個背景 */
+        /* 第二層漸層覆蓋整個背景 */
     }
 
     .banner-text {
@@ -118,6 +118,21 @@
     line-height: 28px;
     letter-spacing: 0.96px;
 }
+.bread{
+  margin-top: 20px;
+  width: 200px;
+  display: flex;
+  justify-content: space-evenly;
+}
+.bread a{
+  display: block;
+  text-decoration: none;
+  color: black;
+}
+
+.bread :nth-child(3){
+  color: #f07346;
+}
 
 .wrap {
     display: flex;
@@ -126,7 +141,7 @@
 
 .text {
     padding: 30px 30px;
-     font-weight: 400;
+    font-weight: 400;
     line-height: 28px;
 }
 
@@ -184,6 +199,10 @@
         font-size: 20px;
         letter-spacing: 1.2px;
         padding: 0 50px;
+    }
+
+    .bread a:hover {
+        font-weight: 700;
     }
 
     .wrap {
